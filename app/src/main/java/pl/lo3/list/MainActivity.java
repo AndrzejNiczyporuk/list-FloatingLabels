@@ -1,14 +1,13 @@
 package pl.lo3.list;
 
-import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
-import android.widget.Toast;
-import pl.lo3.list.CSVAdapter;
-import pl.lo3.list.State;
 
 /*
  * Very basic Activity, the only things it does
@@ -17,14 +16,17 @@ import pl.lo3.list.State;
  * and handle the onItemClick events for when the user
  * clicks on a row.
  */
-public class MainActivity extends Activity {
-
+public class MainActivity extends AppCompatActivity {
+	private Toolbar toolbar;
 	CSVAdapter mAdapter;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		
+
+		toolbar = (Toolbar) findViewById(R.id.toolbar);
+		setSupportActionBar(toolbar);
+
 		//Lookup our ListView
 		ListView mList = (ListView)findViewById(R.id.mList);
 		
@@ -46,7 +48,13 @@ public class MainActivity extends Activity {
 		mList.setOnItemClickListener(new OnItemClickListener() {
 			@Override
 			public void onItemClick(AdapterView<?> parent, View v, int pos,long id) {
-				Toast.makeText(v.getContext(), mAdapter.getItem(pos).getCapital(), Toast.LENGTH_SHORT).show();
+
+				Intent intent = new Intent(getApplicationContext(),ParameterActivity.class);
+				intent.putExtra("info",""+mAdapter.getItem(pos).getCapital());
+				startActivity(intent);
+
+				//Toast.makeText(v.getContext(), mAdapter.getItem(pos).getCapital(), Toast.LENGTH_SHORT).show();
+
 			}
 		});
 	}
