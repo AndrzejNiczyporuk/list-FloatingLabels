@@ -4,13 +4,17 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
 import android.content.Context;
+import android.util.TimeUtils;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
-import pl.lo3.list.State;
 
 
 /*
@@ -65,7 +69,7 @@ public class CSVAdapter extends ArrayAdapter<State>{
 		}
 		
 		//Set the state name as the text.
-		mView.setText(getItem(pos).getName());
+		mView.setText(getItem(pos).getCity() + " "+getItem(pos).getStopName());
 		
 		//We could handle the row clicks from here. But instead
 		//we'll use the ListView.OnItemClickListener from inside
@@ -73,7 +77,7 @@ public class CSVAdapter extends ArrayAdapter<State>{
 		
 		/*mView.setOnClickListener(new OnClickListener(){
 			public void onClick(View v){
-				Toast.makeText(parent.getContext(), getItem(pos).getCapital(), Toast.LENGTH_SHORT).show();
+				Toast.makeText(parent.getContext(), getItem(pos).getCity(), Toast.LENGTH_SHORT).show();
 			}
 		});*/
 		
@@ -96,12 +100,35 @@ public class CSVAdapter extends ArrayAdapter<State>{
 				
 				//Split to separate the name from the capital
 				String[] RowData = line.split(",");
-				
+				//TODO dodac inne zmianienne
 				//Create a State object for this row's data.
 				State cur = new State();
-				cur.setName(RowData[0]);
-				cur.setCapital(RowData[1]);
-				
+
+				cur.setId(Long.parseLong(RowData[0].trim()));
+				cur.setLand(RowData[1]);
+				cur.setCity(RowData[2]);
+				cur.setStopNumber(Integer.parseInt(RowData[3].trim()));
+				cur.setStopName(RowData[4]);
+				cur.setLineNumber(Integer.parseInt(RowData[5].trim()));
+				cur.setLineDirection(RowData[6]);
+				SimpleDateFormat sdf = new SimpleDateFormat("hh:mm:ss");
+                Date tmpTime = null;
+				try {
+					tmpTime = sdf.parse(RowData[7]);
+				} catch (ParseException e) {
+					e.printStackTrace();
+				}
+
+                cur.setFrom(tmpTime);
+
+
+				try {
+					tmpTime = sdf.parse(RowData[8]);
+				} catch (ParseException e) {
+					e.printStackTrace();
+				}
+				cur.setDown(tmpTime);
+
 				//Add the State object to the ArrayList (in this case we are the ArrayList).
 				this.add(cur);
 			}

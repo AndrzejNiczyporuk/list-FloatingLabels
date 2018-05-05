@@ -50,10 +50,10 @@ public class MainActivity extends AppCompatActivity {
 			public void onItemClick(AdapterView<?> parent, View v, int pos,long id) {
 
 				Intent intent = new Intent(getApplicationContext(),ParameterActivity.class);
-				intent.putExtra("info",""+mAdapter.getItem(pos).getCapital());
+				intent.putExtra("info",""+mAdapter.getItem(pos).getCity());
 				startActivity(intent);
 
-				//Toast.makeText(v.getContext(), mAdapter.getItem(pos).getCapital(), Toast.LENGTH_SHORT).show();
+				//Toast.makeText(v.getContext(), mAdapter.getItem(pos).getCity(), Toast.LENGTH_SHORT).show();
 
 			}
 		});
