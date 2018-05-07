@@ -38,7 +38,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="32dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
         app:layout_constraintStart_toStartOf="@+id/input_layout_stop"
         app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
@@ -48,8 +48,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/hint_land"
-            android:inputType=""
-            android:singleLine="true" />
+            android:inputType="text"
+            android:singleLine="true"
+            android:textSize="18sp" />
     </android.support.design.widget.TextInputLayout>
 
 
@@ -67,8 +68,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/hint_city"
-            android:inputType=""
-            android:singleLine="true" />
+            android:inputType="text"
+            android:singleLine="true"
+            android:textSize="18sp" />
     </android.support.design.widget.TextInputLayout>
 
 
@@ -84,18 +86,25 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/input_layout_land">
 
-        <EditText
-            android:id="@+id/input_stop"
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/hint_stop"
-            android:inputType="textEmailAddress" />
+            android:layout_weight="1"
+            android:text="@string/hint_stop"
+            android:textSize="12sp" />
+
+        <Spinner
+            android:id="@+id/input_stop"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/stop_array"
+            android:hint="@string/hint_stop" />
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
         android:id="@+id/input_layout_line"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="63dp"
         android:layout_marginEnd="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
@@ -104,12 +113,62 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/input_layout_stop">
 
-        <EditText
-            android:id="@+id/input_line"
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/hint_line"
-            android:inputType="textPassword" />
+            android:layout_weight="1"
+            android:text="@string/hint_line"
+            android:textSize="12sp" />
+
+        <Spinner
+            android:id="@+id/input_line"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/line_array"
+            android:hint="@string/hint_stop" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_from"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="@+id/input_layout_line"
+        app:layout_constraintTop_toBottomOf="@+id/input_layout_line">
+
+        <EditText
+            android:id="@+id/input_from"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_from"
+            android:inputType="time"
+            android:text="12:00:00"
+            android:textSize="18sp" />
+
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_down"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/input_layout_line"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/input_layout_from">
+
+        <EditText
+            android:id="@+id/input_down"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_down"
+            android:inputType="time"
+            android:text="13:00:00"
+            android:textSize="18sp" />
+
+
     </android.support.design.widget.TextInputLayout>
 
     <Button
@@ -118,13 +177,15 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="20dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="8dp"
         android:background="@color/colorPrimary"
         android:text="@string/btn_save"
         android:textColor="@android:color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/input_layout_line" />
+        app:layout_constraintTop_toBottomOf="@+id/input_layout_from" />
+
+
 
 
 </android.support.constraint.ConstraintLayout>

@@ -8,14 +8,32 @@
 
     <string name="btn_save">Zapisz</string>
 
-    <string name="err_msg_land">Wpisz pełną nazwę Kraju</string>
-    <string name="err_msg_city">Wpisz pełną nazwę Przystanku</string>
+    <string name="err_msg_land">Wprowadź min. 3 znaki </string>
+    <string name="err_msg_city">wprowadź min. 1 znak </string>
     <string name="err_msg_line">Wpisz pełną nazwę linii</string>
     <string name="hint_land">Kraj</string>
     <string name="hint_city">Miasto</string>
     <string name="hint_stop">Przystanek</string>
     <string name="hint_line">Linia</string>
     <string name="Conform">Dane na razie nie zapisane</string>
+    <string name="hint_from">Od</string>
+    <string name="hint_down">Do</string>
 
+
+        <string-array name="stop_array">
+            <item>250 - Białowny</item>
+            <item>260 - Lipowa</item>
+            <item>270 - Piłsudzkiego</item>
+            <item>280 - Pogodna</item>
+        </string-array>
+
+
+    <string-array name="line_array">
+        <item>2 - Kierunek A</item>
+        <item>8 - Kierunek B</item>
+        <item>11 - Kierunek C</item>
+        <item>12 - Kierunek D</item>
+
+        </string-array>
 
 </resources>

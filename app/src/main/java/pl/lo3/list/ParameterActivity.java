@@ -8,8 +8,11 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 public class ParameterActivity extends AppCompatActivity {
@@ -18,6 +21,7 @@ public class ParameterActivity extends AppCompatActivity {
     private EditText inputLand, inputCity;
     private TextInputLayout inputLayoutLand, inputLayoutCity;
     private Button btnSave;
+    private Spinner inputStop;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +37,16 @@ public class ParameterActivity extends AppCompatActivity {
 
         inputLand = (EditText) findViewById(R.id.input_land);
         inputCity = (EditText) findViewById(R.id.input_city);
+        inputStop = (Spinner) findViewById(R.id.input_stop);
+        //TODO zasilenie z zasobu (bazy, pliku) listy przystanków do przemyslenia ułatwienie wyszukania z długiej listy
+        // Create an ArrayAdapter using the string array and a default spinner layout
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                R.array.stop_array, android.R.layout.simple_spinner_dropdown_item);
+        // Apply the adapter to the spinner
+        inputStop.setAdapter(adapter);
 
+
+        // ustawienie domyslne na inną wartość inputStop.setSelection(2);
 
         if(getIntent() != null)
         {
@@ -42,8 +55,6 @@ public class ParameterActivity extends AppCompatActivity {
             inputLand.setText(info);
             info = getIntent().getStringExtra("city");
             inputCity.setText(info);
-
-
         }
 
 
@@ -57,6 +68,31 @@ public class ParameterActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 submitForm();
+            }
+        });
+
+        inputStop.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener()
+        {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
+            {
+                String selectedClass = parent.getItemAtPosition(position).toString();
+                switch (selectedClass.substring(0,3)) {
+                    case "250":
+                        //TODO obsługa
+
+                        break;
+                    case "260":
+                        //TODO obsługa
+
+                        break;
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent)
+            {
+                // can leave this empty
             }
         });
     }
@@ -92,7 +128,7 @@ public class ParameterActivity extends AppCompatActivity {
     }
 
     private boolean validateLand() {
-        if (inputLand.getText().toString().trim().isEmpty()) {
+        if (inputLand.getText().toString().trim().length()<3) {
             inputLayoutLand.setError(getString(R.string.err_msg_land));
             requestFocus(inputLand);
             return false;
@@ -102,10 +138,6 @@ public class ParameterActivity extends AppCompatActivity {
 
         return true;
     }
-
-
-
-
 
 
     private void requestFocus(View view) {
