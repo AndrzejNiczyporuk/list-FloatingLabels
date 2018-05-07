@@ -90,6 +90,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:contextClickable="true"
             android:text="@string/hint_stop"
             android:textSize="12sp" />
 
@@ -117,6 +118,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:contextClickable="false"
             android:text="@string/hint_line"
             android:textSize="12sp" />
 
