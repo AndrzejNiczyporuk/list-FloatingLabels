@@ -1,9 +1,6 @@
 package pl.lo3.list;
 
 
-import android.util.TimeUtils;
-
-import java.util.Calendar;
 import java.util.Date;
 
 /*
@@ -27,7 +24,7 @@ public class State {
 	public void setId(long id) {
 		this.id = id;
 	}
-	public Integer getLineNumber(Integer integer) {
+	public Integer getLineNumber() {
 		return lineNumber;
 	}
 	public void setLineNumber(Integer lineNumber) {

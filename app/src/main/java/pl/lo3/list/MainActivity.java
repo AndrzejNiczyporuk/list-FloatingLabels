@@ -50,7 +50,8 @@ public class MainActivity extends AppCompatActivity {
 			public void onItemClick(AdapterView<?> parent, View v, int pos,long id) {
 
 				Intent intent = new Intent(getApplicationContext(),ParameterActivity.class);
-				intent.putExtra("info",""+mAdapter.getItem(pos).getCity());
+				intent.putExtra("land",""+mAdapter.getItem(pos).getLand());
+                intent.putExtra("city",""+mAdapter.getItem(pos).getCity());
 				startActivity(intent);
 
 				//Toast.makeText(v.getContext(), mAdapter.getItem(pos).getCity(), Toast.LENGTH_SHORT).show();

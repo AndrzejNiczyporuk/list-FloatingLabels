@@ -5,14 +5,17 @@
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
 
-    <string name="hint_name">Full Name</string>
-    <string name="hint_email">Email</string>
-    <string name="hint_password">Password</string>
-    <string name="btn_sign_up">Sign Up</string>
 
-    <string name="err_msg_name">Enter your full land</string>
-    <string name="err_msg_email">Enter valid email address</string>
-    <string name="err_msg_password">Enter the password</string>
+    <string name="btn_save">Zapisz</string>
+
+    <string name="err_msg_land">Wpisz pełną nazwę Kraju</string>
+    <string name="err_msg_city">Wpisz pełną nazwę Przystanku</string>
+    <string name="err_msg_line">Wpisz pełną nazwę linii</string>
+    <string name="hint_land">Kraj</string>
+    <string name="hint_city">Miasto</string>
+    <string name="hint_stop">Przystanek</string>
+    <string name="hint_line">Linia</string>
+    <string name="Conform">Dane na razie nie zapisane</string>
 
 
 </resources>

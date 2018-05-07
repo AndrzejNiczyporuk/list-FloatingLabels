@@ -5,7 +5,6 @@ import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Editable;
-import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.view.View;
 import android.view.WindowManager;
@@ -16,9 +15,9 @@ import android.widget.Toast;
 public class ParameterActivity extends AppCompatActivity {
 
     private Toolbar toolbar;
-    private EditText inputName, inputEmail, inputPassword;
-    private TextInputLayout inputLayoutName, inputLayoutEmail, inputLayoutPassword;
-    private Button btnSignUp;
+    private EditText inputLand, inputCity;
+    private TextInputLayout inputLayoutLand, inputLayoutCity;
+    private Button btnSave;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,29 +27,33 @@ public class ParameterActivity extends AppCompatActivity {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        inputLayoutName = (TextInputLayout) findViewById(R.id.input_layout_name);
-        inputLayoutEmail = (TextInputLayout) findViewById(R.id.input_layout_email);
-        inputLayoutPassword = (TextInputLayout) findViewById(R.id.input_layout_password);
+        inputLayoutLand = (TextInputLayout) findViewById(R.id.input_layout_land);
+        inputLayoutCity = (TextInputLayout) findViewById(R.id.input_layout_city);
 
-        inputName = (EditText) findViewById(R.id.input_name);
-        inputEmail = (EditText) findViewById(R.id.input_email);
-        inputPassword = (EditText) findViewById(R.id.input_password);
+
+        inputLand = (EditText) findViewById(R.id.input_land);
+        inputCity = (EditText) findViewById(R.id.input_city);
+
 
         if(getIntent() != null)
         {
             // pobranie parametru
-            String info = getIntent().getStringExtra("info");
-            inputName.setText(info);
+            String info = getIntent().getStringExtra("land");
+            inputLand.setText(info);
+            info = getIntent().getStringExtra("city");
+            inputCity.setText(info);
+
+
         }
 
 
-        btnSignUp = (Button) findViewById(R.id.btn_signup);
+        btnSave = (Button) findViewById(R.id.btn_save);
 
-        inputName.addTextChangedListener(new MyTextWatcher(inputName));
-        inputEmail.addTextChangedListener(new MyTextWatcher(inputEmail));
-        inputPassword.addTextChangedListener(new MyTextWatcher(inputPassword));
+        inputLand.addTextChangedListener(new MyTextWatcher(inputLand));
+        inputCity.addTextChangedListener(new MyTextWatcher(inputCity));
 
-        btnSignUp.setOnClickListener(new View.OnClickListener() {
+
+        btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 submitForm();
@@ -62,62 +65,48 @@ public class ParameterActivity extends AppCompatActivity {
      * Validating form
      */
     private void submitForm() {
-        if (!validateName()) {
+        if (!validateLand()) {
             return;
         }
 
-        if (!validateEmail()) {
+        if (!validateCity()) {
             return;
         }
 
-        if (!validatePassword()) {
-            return;
-        }
 
-        Toast.makeText(getApplicationContext(), "Thank You!", Toast.LENGTH_SHORT).show();
+
+
+        Toast.makeText(getApplicationContext(), R.string.Conform, Toast.LENGTH_SHORT).show();
     }
 
-    private boolean validateName() {
-        if (inputName.getText().toString().trim().isEmpty()) {
-            inputLayoutName.setError(getString(R.string.err_msg_name));
-            requestFocus(inputName);
+    private boolean validateCity() {
+        if (inputCity.getText().toString().trim().isEmpty()) {
+            inputLayoutCity.setError(getString(R.string.err_msg_city));
+            requestFocus(inputCity);
             return false;
         } else {
-            inputLayoutName.setErrorEnabled(false);
+            inputLayoutCity.setErrorEnabled(false);
         }
 
         return true;
     }
 
-    private boolean validateEmail() {
-        String email = inputEmail.getText().toString().trim();
-
-        if (email.isEmpty() || !isValidEmail(email)) {
-            inputLayoutEmail.setError(getString(R.string.err_msg_email));
-            requestFocus(inputEmail);
+    private boolean validateLand() {
+        if (inputLand.getText().toString().trim().isEmpty()) {
+            inputLayoutLand.setError(getString(R.string.err_msg_land));
+            requestFocus(inputLand);
             return false;
         } else {
-            inputLayoutEmail.setErrorEnabled(false);
+            inputLayoutLand.setErrorEnabled(false);
         }
 
         return true;
     }
 
-    private boolean validatePassword() {
-        if (inputPassword.getText().toString().trim().isEmpty()) {
-            inputLayoutPassword.setError(getString(R.string.err_msg_password));
-            requestFocus(inputPassword);
-            return false;
-        } else {
-            inputLayoutPassword.setErrorEnabled(false);
-        }
 
-        return true;
-    }
 
-    private static boolean isValidEmail(String email) {
-        return !TextUtils.isEmpty(email) && android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches();
-    }
+
+
 
     private void requestFocus(View view) {
         if (view.requestFocus()) {
@@ -141,15 +130,13 @@ public class ParameterActivity extends AppCompatActivity {
 
         public void afterTextChanged(Editable editable) {
             switch (view.getId()) {
-                case R.id.input_name:
-                    validateName();
+                case R.id.input_city:
+                    validateCity();
                     break;
-                case R.id.input_email:
-                    validateEmail();
+                case R.id.input_land:
+                    validateLand();
                     break;
-                case R.id.input_password:
-                    validatePassword();
-                    break;
+
             }
         }
     }
