@@ -50,7 +50,8 @@
             android:hint="@string/hint_land"
             android:inputType="text"
             android:singleLine="true"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            />
     </android.support.design.widget.TextInputLayout>
 
 
@@ -70,7 +71,8 @@
             android:hint="@string/hint_city"
             android:inputType="text"
             android:singleLine="true"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            />
     </android.support.design.widget.TextInputLayout>
 
 
@@ -105,10 +107,8 @@
     <android.support.design.widget.TextInputLayout
         android:id="@+id/input_layout_line"
         android:layout_width="0dp"
-        android:layout_height="63dp"
+        android:layout_height="wrap_content"
         android:layout_marginEnd="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
         android:layout_marginStart="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -127,7 +127,8 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:entries="@array/line_array"
-            android:hint="@string/hint_stop" />
+            android:hint="@string/hint_line"
+            />
 
     </android.support.design.widget.TextInputLayout>
 
@@ -144,10 +145,12 @@
             android:id="@+id/input_from"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:contextClickable="true"
             android:hint="@string/hint_from"
             android:inputType="time"
-            android:text="12:00:00"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:focusable="false"
+            android:text="12:00:00"/>
 
 
     </android.support.design.widget.TextInputLayout>
@@ -165,10 +168,12 @@
             android:id="@+id/input_down"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:contextClickable="true"
             android:hint="@string/hint_down"
             android:inputType="time"
             android:text="13:00:00"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:focusable="false"/>
 
 
     </android.support.design.widget.TextInputLayout>

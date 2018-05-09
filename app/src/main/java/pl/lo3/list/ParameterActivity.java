@@ -1,5 +1,6 @@
 package pl.lo3.list;
 
+import android.app.TimePickerDialog;
 import android.os.Bundle;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -13,15 +14,23 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TimePicker;
 import android.widget.Toast;
+import java.util.Calendar;
 
 public class ParameterActivity extends AppCompatActivity {
 
     private Toolbar toolbar;
-    private EditText inputLand, inputCity;
+    private EditText inputLand, inputCity, inputFrom, inputDown;
     private TextInputLayout inputLayoutLand, inputLayoutCity;
     private Button btnSave;
-    private Spinner inputStop;
+    private Spinner inputStop, inputLine;
+    private int CalendarHour, CalendarMinute;
+
+    Calendar calendar;
+    TimePickerDialog timepickerdialog;
+    ArrayAdapter<CharSequence> adapterStop;
+    ArrayAdapter<CharSequence> adapterLine;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,18 +42,26 @@ public class ParameterActivity extends AppCompatActivity {
 
         inputLayoutLand = (TextInputLayout) findViewById(R.id.input_layout_land);
         inputLayoutCity = (TextInputLayout) findViewById(R.id.input_layout_city);
-
-
         inputLand = (EditText) findViewById(R.id.input_land);
         inputCity = (EditText) findViewById(R.id.input_city);
         inputStop = (Spinner) findViewById(R.id.input_stop);
+        inputLine = (Spinner) findViewById(R.id.input_line);
+        inputFrom =(EditText) findViewById(R.id.input_from);
+        inputDown =(EditText) findViewById(R.id.input_down);
+
         //TODO zasilenie z zasobu (bazy, pliku) listy przystanków do przemyslenia ułatwienie wyszukania z długiej listy
         // Create an ArrayAdapter using the string array and a default spinner layout
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+        adapterStop = ArrayAdapter.createFromResource(this,
                 R.array.stop_array, android.R.layout.simple_spinner_dropdown_item);
         // Apply the adapter to the spinner
-        inputStop.setAdapter(adapter);
+        inputStop.setAdapter(adapterStop);
 
+        //TODO zasilenie z zasobu (bazy, pliku) listy linii do przemyslenia ułatwienie wyszukania z długiej listy
+        // Create an ArrayAdapter using the string array and a default spinner layout
+        adapterLine = ArrayAdapter.createFromResource(this,
+                R.array.line_array, android.R.layout.simple_spinner_dropdown_item);
+        // Apply the adapter to the spinner
+        inputLine.setAdapter(adapterLine);
 
         // ustawienie domyslne na inną wartość inputStop.setSelection(2);
 
@@ -57,7 +74,6 @@ public class ParameterActivity extends AppCompatActivity {
             inputCity.setText(info);
         }
 
-
         btnSave = (Button) findViewById(R.id.btn_save);
 
         inputLand.addTextChangedListener(new MyTextWatcher(inputLand));
@@ -68,6 +84,49 @@ public class ParameterActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 submitForm();
+            }
+        });
+        inputFrom.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                calendar = Calendar.getInstance();
+                CalendarHour = calendar.get(Calendar.HOUR_OF_DAY);
+                CalendarMinute = calendar.get(Calendar.MINUTE);
+
+                timepickerdialog = new TimePickerDialog(ParameterActivity.this,
+                        new TimePickerDialog.OnTimeSetListener() {
+
+                            @Override
+                            public void onTimeSet(TimePicker view, int hourOfDay,
+                                                  int minute) {
+                                   inputFrom.setText(hourOfDay + ":" + minute +":00");
+                            }
+                        }, CalendarHour, CalendarMinute, true);
+                timepickerdialog.show();
+
+            }
+        });
+
+        inputDown.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                calendar = Calendar.getInstance();
+                CalendarHour = calendar.get(Calendar.HOUR_OF_DAY);
+                CalendarMinute = calendar.get(Calendar.MINUTE);
+
+                timepickerdialog = new TimePickerDialog(ParameterActivity.this,
+                        new TimePickerDialog.OnTimeSetListener() {
+
+                            @Override
+                            public void onTimeSet(TimePicker view, int hourOfDay,
+                                                  int minute) {
+                                inputDown.setText(hourOfDay + ":" + minute +":00");
+                            }
+                        }, CalendarHour, CalendarMinute, true);
+                timepickerdialog.show();
+
             }
         });
 
