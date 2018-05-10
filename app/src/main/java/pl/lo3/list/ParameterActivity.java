@@ -1,6 +1,7 @@
 package pl.lo3.list;
 
 import android.app.TimePickerDialog;
+import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -16,18 +17,23 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TimePicker;
 import android.widget.Toast;
+
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
+
+import pl.lo3.list.databinding.ActivityParameterBinding;
 
 public class ParameterActivity extends AppCompatActivity {
 
-    private Toolbar toolbar;
-    private EditText inputLand, inputCity, inputFrom, inputDown;
-    private TextInputLayout inputLayoutLand, inputLayoutCity;
-    private Button btnSave;
-    private Spinner inputStop, inputLine;
-    private int CalendarHour, CalendarMinute;
+//    private Toolbar toolbar;
+//    private EditText inputLand, inputCity, inputFrom, inputDown;
+//    private TextInputLayout inputLayoutLand, inputLayoutCity;
+//    private Button btnSave;
+//    private Spinner inputStop, inputLine;
+//    private int CalendarHour, CalendarMinute;
 
-    Calendar calendar;
+    ActivityParameterBinding binding;
     TimePickerDialog timepickerdialog;
     ArrayAdapter<CharSequence> adapterStop;
     ArrayAdapter<CharSequence> adapterLine;
@@ -36,63 +42,78 @@ public class ParameterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_parameter);
+         binding= DataBindingUtil.setContentView(this, R.layout.activity_parameter);
 
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        //toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(binding.toolbar);
 
-        inputLayoutLand = (TextInputLayout) findViewById(R.id.input_layout_land);
-        inputLayoutCity = (TextInputLayout) findViewById(R.id.input_layout_city);
-        inputLand = (EditText) findViewById(R.id.input_land);
-        inputCity = (EditText) findViewById(R.id.input_city);
-        inputStop = (Spinner) findViewById(R.id.input_stop);
-        inputLine = (Spinner) findViewById(R.id.input_line);
-        inputFrom =(EditText) findViewById(R.id.input_from);
-        inputDown =(EditText) findViewById(R.id.input_down);
+//        inputLayoutLand = (TextInputLayout) findViewById(R.id.input_layout_land);
+//        inputLayoutCity = (TextInputLayout) findViewById(R.id.input_layout_city);
+//        inputLand = (EditText) findViewById(R.id.input_land);
+//        inputCity = (EditText) findViewById(R.id.input_city);
+//        inputStop = (Spinner) findViewById(R.id.input_stop);
+//        inputLine = (Spinner) findViewById(R.id.input_line);
+//        inputFrom =(EditText) findViewById(R.id.input_from);
+//        inputDown =(EditText) findViewById(R.id.input_down);
 
         //TODO zasilenie z zasobu (bazy, pliku) listy przystanków do przemyslenia ułatwienie wyszukania z długiej listy
         // Create an ArrayAdapter using the string array and a default spinner layout
         adapterStop = ArrayAdapter.createFromResource(this,
                 R.array.stop_array, android.R.layout.simple_spinner_dropdown_item);
         // Apply the adapter to the spinner
-        inputStop.setAdapter(adapterStop);
+        binding.inputStop.setAdapter(adapterStop);
 
         //TODO zasilenie z zasobu (bazy, pliku) listy linii do przemyslenia ułatwienie wyszukania z długiej listy
         // Create an ArrayAdapter using the string array and a default spinner layout
         adapterLine = ArrayAdapter.createFromResource(this,
                 R.array.line_array, android.R.layout.simple_spinner_dropdown_item);
         // Apply the adapter to the spinner
-        inputLine.setAdapter(adapterLine);
+        binding.inputLine.setAdapter(adapterLine);
 
         // ustawienie domyslne na inną wartość inputStop.setSelection(2);
 
         if(getIntent() != null)
         {
             // pobranie parametru
-            String info = getIntent().getStringExtra("land");
-            inputLand.setText(info);
-            info = getIntent().getStringExtra("city");
-            inputCity.setText(info);
+            Calendar calendar = Calendar.getInstance();
+            String compareValue;
+            binding.inputLand.setText(getIntent().getStringExtra("land"));
+            binding.inputCity.setText(getIntent().getStringExtra("city"));
+
+            compareValue = getIntent().getStringExtra("stop");
+                        if (compareValue != null) {
+                            binding.inputStop.setSelection(adapterStop.getPosition(compareValue));
+                        }
+            compareValue = getIntent().getStringExtra("line");
+            if (compareValue != null) {
+                binding.inputLine.setSelection(adapterLine.getPosition(compareValue));
+            }
+            calendar.setTimeInMillis(Long.valueOf(getIntent().getStringExtra("from")));
+            binding.inputFrom.setText(""+calendar.get(Calendar.HOUR_OF_DAY)+":"+calendar.get(Calendar.MINUTE)+":00");
+            calendar.setTimeInMillis(Long.valueOf(getIntent().getStringExtra("down")));
+            binding.inputDown.setText(""+calendar.get(Calendar.HOUR_OF_DAY)+":"+calendar.get(Calendar.MINUTE)+":00");
+
         }
 
-        btnSave = (Button) findViewById(R.id.btn_save);
+        //binding.btnSave = (Button) findViewById(R.id.btn_save);
 
-        inputLand.addTextChangedListener(new MyTextWatcher(inputLand));
-        inputCity.addTextChangedListener(new MyTextWatcher(inputCity));
+        binding.inputLand.addTextChangedListener(new MyTextWatcher(binding.inputLand));
+        binding.inputCity.addTextChangedListener(new MyTextWatcher(binding.inputCity));
 
 
-        btnSave.setOnClickListener(new View.OnClickListener() {
+        binding.btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 submitForm();
             }
         });
-        inputFrom.setOnClickListener(new View.OnClickListener() {
+        binding.inputFrom.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                calendar = Calendar.getInstance();
-                CalendarHour = calendar.get(Calendar.HOUR_OF_DAY);
-                CalendarMinute = calendar.get(Calendar.MINUTE);
+                Calendar calendar = Calendar.getInstance();
+                int CalendarHour = calendar.get(Calendar.HOUR_OF_DAY);
+                int CalendarMinute = calendar.get(Calendar.MINUTE);
 
                 timepickerdialog = new TimePickerDialog(ParameterActivity.this,
                         new TimePickerDialog.OnTimeSetListener() {
@@ -100,7 +121,7 @@ public class ParameterActivity extends AppCompatActivity {
                             @Override
                             public void onTimeSet(TimePicker view, int hourOfDay,
                                                   int minute) {
-                                   inputFrom.setText(hourOfDay + ":" + minute +":00");
+                                binding.inputFrom.setText(hourOfDay + ":" + minute +":00");
                             }
                         }, CalendarHour, CalendarMinute, true);
                 timepickerdialog.show();
@@ -108,13 +129,13 @@ public class ParameterActivity extends AppCompatActivity {
             }
         });
 
-        inputDown.setOnClickListener(new View.OnClickListener() {
+        binding.inputDown.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                calendar = Calendar.getInstance();
-                CalendarHour = calendar.get(Calendar.HOUR_OF_DAY);
-                CalendarMinute = calendar.get(Calendar.MINUTE);
+                Calendar calendar = Calendar.getInstance();
+                int CalendarHour = calendar.get(Calendar.HOUR_OF_DAY);
+                int CalendarMinute = calendar.get(Calendar.MINUTE);
 
                 timepickerdialog = new TimePickerDialog(ParameterActivity.this,
                         new TimePickerDialog.OnTimeSetListener() {
@@ -122,7 +143,7 @@ public class ParameterActivity extends AppCompatActivity {
                             @Override
                             public void onTimeSet(TimePicker view, int hourOfDay,
                                                   int minute) {
-                                inputDown.setText(hourOfDay + ":" + minute +":00");
+                                binding.inputDown.setText(hourOfDay + ":" + minute +":00");
                             }
                         }, CalendarHour, CalendarMinute, true);
                 timepickerdialog.show();
@@ -130,7 +151,7 @@ public class ParameterActivity extends AppCompatActivity {
             }
         });
 
-        inputStop.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener()
+        binding.inputStop.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener()
         {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
@@ -175,24 +196,24 @@ public class ParameterActivity extends AppCompatActivity {
     }
 
     private boolean validateCity() {
-        if (inputCity.getText().toString().trim().isEmpty()) {
-            inputLayoutCity.setError(getString(R.string.err_msg_city));
-            requestFocus(inputCity);
+        if (binding.inputCity.getText().toString().trim().isEmpty()) {
+            binding.inputLayoutCity.setError(getString(R.string.err_msg_city));
+            requestFocus(binding.inputCity);
             return false;
         } else {
-            inputLayoutCity.setErrorEnabled(false);
+            binding.inputLayoutCity.setErrorEnabled(false);
         }
 
         return true;
     }
 
     private boolean validateLand() {
-        if (inputLand.getText().toString().trim().length()<3) {
-            inputLayoutLand.setError(getString(R.string.err_msg_land));
-            requestFocus(inputLand);
+        if (binding.inputLand.getText().toString().trim().length()<3) {
+            binding.inputLayoutLand.setError(getString(R.string.err_msg_land));
+            requestFocus(binding.inputLand);
             return false;
         } else {
-            inputLayoutLand.setErrorEnabled(false);
+            binding.inputLayoutLand.setErrorEnabled(false);
         }
 
         return true;

@@ -22,18 +22,18 @@
 
 
         <string-array name="stop_array">
-            <item>250 - Białowny</item>
-            <item>260 - Lipowa</item>
-            <item>270 - Piłsudzkiego</item>
-            <item>280 - Pogodna</item>
+            <item>250-Białowny</item>
+            <item>260-Lipowa</item>
+            <item>270-Piłsudzkiego</item>
+            <item>280-Pogodna</item>
         </string-array>
 
 
     <string-array name="line_array">
-        <item>2 - Kierunek A</item>
-        <item>8 - Kierunek B</item>
-        <item>11 - Kierunek C</item>
-        <item>12 - Kierunek D</item>
+        <item>2-Kierunek A</item>
+        <item>8-Kierunek B</item>
+        <item>11-Kierunek C</item>
+        <item>12-Kierunek D</item>
 
         </string-array>
 
