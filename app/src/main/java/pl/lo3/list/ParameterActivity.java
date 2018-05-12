@@ -3,24 +3,17 @@ package pl.lo3.list;
 import android.app.TimePickerDialog;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
-import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Spinner;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
-import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Date;
 
 import pl.lo3.list.databinding.ActivityParameterBinding;
 
@@ -72,10 +65,11 @@ public class ParameterActivity extends AppCompatActivity {
 
         // ustawienie domyslne na inną wartość inputStop.setSelection(2);
 
-        if(getIntent() != null)
+        Calendar calendar = Calendar.getInstance();
+        if(getIntent().getStringExtra("land") != null)
         {
             // pobranie parametru
-            Calendar calendar = Calendar.getInstance();
+
             String compareValue;
             binding.inputLand.setText(getIntent().getStringExtra("land"));
             binding.inputCity.setText(getIntent().getStringExtra("city"));
@@ -89,17 +83,23 @@ public class ParameterActivity extends AppCompatActivity {
                 binding.inputLine.setSelection(adapterLine.getPosition(compareValue));
             }
             calendar.setTimeInMillis(Long.valueOf(getIntent().getStringExtra("from")));
-            binding.inputFrom.setText(""+calendar.get(Calendar.HOUR_OF_DAY)+":"+calendar.get(Calendar.MINUTE)+":00");
+            binding.inputFrom.setText(String.format("%02d:%02d:00",  calendar.get(Calendar.HOUR_OF_DAY), calendar.get(Calendar.MINUTE)));
             calendar.setTimeInMillis(Long.valueOf(getIntent().getStringExtra("down")));
-            binding.inputDown.setText(""+calendar.get(Calendar.HOUR_OF_DAY)+":"+calendar.get(Calendar.MINUTE)+":00");
+            binding.inputDown.setText(String.format("%02d:%02d:00",  calendar.get(Calendar.HOUR_OF_DAY), calendar.get(Calendar.MINUTE)));
 
+        }
+        else
+        {
+            // przy nowym ustawienie domyslego czasu przeuniętego o 1h
+            binding.inputFrom.setText(String.format("%02d:%02d:00",  calendar.get(Calendar.HOUR_OF_DAY), calendar.get(Calendar.MINUTE)));
+            calendar.add(Calendar.HOUR, 1);
+            binding.inputDown.setText(String.format("%02d:%02d:00",  calendar.get(Calendar.HOUR_OF_DAY), calendar.get(Calendar.MINUTE)));
         }
 
         //binding.btnSave = (Button) findViewById(R.id.btn_save);
 
         binding.inputLand.addTextChangedListener(new MyTextWatcher(binding.inputLand));
         binding.inputCity.addTextChangedListener(new MyTextWatcher(binding.inputCity));
-
 
         binding.btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -112,8 +112,10 @@ public class ParameterActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 Calendar calendar = Calendar.getInstance();
+                //TODO set time from file binding.inputFrom.getText()
                 int CalendarHour = calendar.get(Calendar.HOUR_OF_DAY);
                 int CalendarMinute = calendar.get(Calendar.MINUTE);
+
 
                 timepickerdialog = new TimePickerDialog(ParameterActivity.this,
                         new TimePickerDialog.OnTimeSetListener() {
@@ -121,7 +123,8 @@ public class ParameterActivity extends AppCompatActivity {
                             @Override
                             public void onTimeSet(TimePicker view, int hourOfDay,
                                                   int minute) {
-                                binding.inputFrom.setText(hourOfDay + ":" + minute +":00");
+                                binding.inputFrom.setText(String.format("%02d:%02d:00", hourOfDay, minute ));
+
                             }
                         }, CalendarHour, CalendarMinute, true);
                 timepickerdialog.show();
@@ -134,8 +137,10 @@ public class ParameterActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 Calendar calendar = Calendar.getInstance();
+                //TODO set time from file binding.inputDown.getText()
                 int CalendarHour = calendar.get(Calendar.HOUR_OF_DAY);
                 int CalendarMinute = calendar.get(Calendar.MINUTE);
+
 
                 timepickerdialog = new TimePickerDialog(ParameterActivity.this,
                         new TimePickerDialog.OnTimeSetListener() {
@@ -143,7 +148,7 @@ public class ParameterActivity extends AppCompatActivity {
                             @Override
                             public void onTimeSet(TimePicker view, int hourOfDay,
                                                   int minute) {
-                                binding.inputDown.setText(hourOfDay + ":" + minute +":00");
+                                binding.inputDown.setText(String.format("%02d:%02d:00", hourOfDay, minute ));
                             }
                         }, CalendarHour, CalendarMinute, true);
                 timepickerdialog.show();
@@ -157,7 +162,8 @@ public class ParameterActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
             {
                 String selectedClass = parent.getItemAtPosition(position).toString();
-                switch (selectedClass.substring(0,3)) {
+                if (selectedClass.length()>0) {
+                switch (selectedClass.substring(0, 3)) {
                     case "250":
                         //TODO obsługa
 
@@ -167,6 +173,7 @@ public class ParameterActivity extends AppCompatActivity {
 
                         break;
                 }
+            }
             }
 
             @Override
@@ -188,11 +195,36 @@ public class ParameterActivity extends AppCompatActivity {
         if (!validateCity()) {
             return;
         }
-
-
-
-
+        if (!validateStop()) {
+                return;
+        }
+        if (!validateLine()) {
+            return;
+        }
         Toast.makeText(getApplicationContext(), R.string.Conform, Toast.LENGTH_SHORT).show();
+    }
+
+    private boolean validateLine() {
+        //binding.inputStop.setSelection(adapterStop.getPosition(compareValue));
+        if (binding.inputLine.getSelectedItem().toString().trim().isEmpty()) {
+            binding.inputLayoutLine.setError(getString(R.string.err_msg_line));
+            requestFocus(binding.inputLine);
+            return false;
+        } else {
+            binding.inputLayoutLine.setErrorEnabled(false);
+        }
+        return true;
+    }
+
+    private boolean validateStop() {
+        if (binding.inputStop.getSelectedItem().toString().trim().isEmpty()) {
+            binding.inputLayoutStop.setError(getString(R.string.err_msg_stop));
+            requestFocus(binding.inputStop);
+            return false;
+        } else {
+            binding.inputLayoutStop.setErrorEnabled(false);
+        }
+        return true;
     }
 
     private boolean validateCity() {
@@ -203,7 +235,6 @@ public class ParameterActivity extends AppCompatActivity {
         } else {
             binding.inputLayoutCity.setErrorEnabled(false);
         }
-
         return true;
     }
 
@@ -215,7 +246,6 @@ public class ParameterActivity extends AppCompatActivity {
         } else {
             binding.inputLayoutLand.setErrorEnabled(false);
         }
-
         return true;
     }
 
@@ -252,4 +282,6 @@ public class ParameterActivity extends AppCompatActivity {
             }
         }
     }
+
+
 }
