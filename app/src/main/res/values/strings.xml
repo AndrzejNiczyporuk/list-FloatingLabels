@@ -18,7 +18,7 @@
     <string name="hint_city">Miasto</string>
     <string name="hint_stop">Przystanek</string>
     <string name="hint_line">Linia</string>
-    <string name="Conform">Dane na razie nie zapisane</string>
+    <string name="Conform">Dane zapisane</string>
     <string name="hint_from">Od</string>
     <string name="hint_down">Do</string>
     <string name="default_land">Polska</string>

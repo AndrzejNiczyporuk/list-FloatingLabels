@@ -36,6 +36,11 @@ public class State {
 	public void setLineDirection(String lineDirection) {
 		this.lineDirection = lineDirection;
 	}
+	public void setLineNumberAndDirection(String stopNaN) {
+		String[] RowData = stopNaN.split("-");
+		this.lineNumber = Integer.parseInt(RowData[0].trim());
+		this.lineDirection=RowData[1];
+	}
 	public Date getFrom() {
 		return from;
 	}
@@ -59,6 +64,11 @@ public class State {
 	}
 	public void setStopNumber(Integer stopNumber) {
 		this.stopNumber = stopNumber;
+	}
+	public void setStopNumberAndName(String stopNaN) {
+		String[] RowData = stopNaN.split("-");
+		this.stopNumber = Integer.parseInt(RowData[0].trim());
+		this.stopName=RowData[1];
 	}
 	public String getLand() {
 		return land;

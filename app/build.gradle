@@ -23,7 +23,9 @@ android {
 
 dependencies {
     fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'io.paperdb:paperdb:2.6'
     implementation 'com.android.support.constraint:constraint-layout:1.1.0'
     implementation 'com.android.support:appcompat-v7:26.1.0'
     implementation 'com.android.support:design:26.1.0'
+
 }

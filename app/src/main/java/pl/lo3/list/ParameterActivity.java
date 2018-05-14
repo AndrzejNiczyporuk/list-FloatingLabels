@@ -13,8 +13,13 @@ import android.widget.ArrayAdapter;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
+import java.util.List;
 
+import io.paperdb.Paper;
 import pl.lo3.list.databinding.ActivityParameterBinding;
 
 public class ParameterActivity extends AppCompatActivity {
@@ -27,7 +32,6 @@ public class ParameterActivity extends AppCompatActivity {
 //    private int CalendarHour, CalendarMinute;
 
     ActivityParameterBinding binding;
-    TimePickerDialog timepickerdialog;
     ArrayAdapter<CharSequence> adapterStop;
     ArrayAdapter<CharSequence> adapterLine;
 
@@ -71,6 +75,7 @@ public class ParameterActivity extends AppCompatActivity {
             // pobranie parametru
 
             String compareValue;
+            binding.inputId.setText(getIntent().getStringExtra("id"));
             binding.inputLand.setText(getIntent().getStringExtra("land"));
             binding.inputCity.setText(getIntent().getStringExtra("city"));
 
@@ -104,7 +109,47 @@ public class ParameterActivity extends AppCompatActivity {
         binding.btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                submitForm();
+
+
+                if (submitForm())
+                {
+                    State tmpD = new State();
+
+                    tmpD.setCity(binding.inputCity.getText().toString().trim());
+                    tmpD.setLand(binding.inputLand.getText().toString().trim());
+                    tmpD.setStopNumberAndName(binding.inputStop.getSelectedItem().toString().trim());
+                    tmpD.setLineNumberAndDirection(binding.inputLine.getSelectedItem().toString().trim());
+
+                    SimpleDateFormat sdf = new SimpleDateFormat("hh:mm:ss");
+                    Date tmpTime = null;
+                    try {
+                        tmpTime = sdf.parse(binding.inputFrom.getText().toString().trim());
+                    } catch (ParseException e) {
+                        e.printStackTrace();
+                    }
+                    tmpD.setFrom(tmpTime);
+
+                    try {
+                        tmpTime = sdf.parse(binding.inputDown.getText().toString().trim());
+                    } catch (ParseException e) {
+                        e.printStackTrace();
+                    }
+                    tmpD.setDown(tmpTime);
+                    Integer tmpId= Integer.valueOf(binding.inputId.getText().toString().trim());
+
+
+                    if (tmpId==-1)
+                    {// pobierz listę i dodaj 1 jako nowy obiekt
+                        List<String> allKeys = Paper.book().getAllKeys();
+                        tmpId=allKeys.size()+1;
+                        tmpD.setId(tmpId);
+                    }
+                    Paper.book().write(String.valueOf(tmpId), tmpD);
+                    Toast.makeText(getApplicationContext(), R.string.Conform, Toast.LENGTH_SHORT).show();
+                    //aa.notifyDataSetChanged();
+                    finish();
+
+                }
             }
         });
         binding.inputFrom.setOnClickListener(new View.OnClickListener() {
@@ -117,7 +162,7 @@ public class ParameterActivity extends AppCompatActivity {
                 int CalendarMinute = calendar.get(Calendar.MINUTE);
 
 
-                timepickerdialog = new TimePickerDialog(ParameterActivity.this,
+                TimePickerDialog timepickerdialog= new TimePickerDialog(ParameterActivity.this,
                         new TimePickerDialog.OnTimeSetListener() {
 
                             @Override
@@ -142,7 +187,7 @@ public class ParameterActivity extends AppCompatActivity {
                 int CalendarMinute = calendar.get(Calendar.MINUTE);
 
 
-                timepickerdialog = new TimePickerDialog(ParameterActivity.this,
+                TimePickerDialog timepickerdialog = new TimePickerDialog(ParameterActivity.this,
                         new TimePickerDialog.OnTimeSetListener() {
 
                             @Override
@@ -187,21 +232,22 @@ public class ParameterActivity extends AppCompatActivity {
     /**
      * Validating form
      */
-    private void submitForm() {
+    private boolean submitForm() {
         if (!validateLand()) {
-            return;
+            return false;
         }
 
         if (!validateCity()) {
-            return;
+            return false;
         }
         if (!validateStop()) {
-                return;
+                return false;
         }
         if (!validateLine()) {
-            return;
+            return false;
         }
-        Toast.makeText(getApplicationContext(), R.string.Conform, Toast.LENGTH_SHORT).show();
+        return true;
+
     }
 
     private boolean validateLine() {
