@@ -31,6 +31,7 @@ public class PaperAdapter extends ArrayAdapter<State> {
 		
 		//Load the data.
 		loadArrayFromPaper();
+//        this.setNotifyOnChange(true);
 	}
 	
 	
@@ -42,6 +43,12 @@ public class PaperAdapter extends ArrayAdapter<State> {
 	 * (non-Javadoc)
 	 * @see android.widget.ArrayAdapter#getView(int, android.view.View, android.view.ViewGroup)
 	 */
+//    @Override
+//    public void notifyDataSetChanged() {
+//        this.clear();
+//        loadArrayFromPaper();
+//        super.notifyDataSetChanged();
+//    }
 	@Override
 	public View getView(final int pos, View convertView, final ViewGroup parent){
 		/*
@@ -79,13 +86,13 @@ public class PaperAdapter extends ArrayAdapter<State> {
 	}
 	
 	/*
-	 * Helper method that loads the data from the states.csv and builds
-	 * each csv row into a State object which then gets added to the Adapter.
+	 * Helper method that loads the data from the Paper.book and builds
+	 * each row into a State object which then gets added to the Adapter.
 	 */
 	private void loadArrayFromPaper(){
 		// Get list of item
 		List<String> allKeys = Paper.book().getAllKeys();
-		State cur = new State();
+		State cur;
 
 		for (int i = 0; i <allKeys.size() ; i++) {
             //Create a State object for each Key.
@@ -94,6 +101,12 @@ public class PaperAdapter extends ArrayAdapter<State> {
             this.add(cur);
         }
 	}
+
+    public void reloadArrayFromPaper(){
+        this.clear();
+        loadArrayFromPaper();
+
+    }
 
     private void reloadFromPaper(Integer KeyToReload){
 

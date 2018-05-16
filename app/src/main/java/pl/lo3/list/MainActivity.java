@@ -8,7 +8,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
+
+import java.util.List;
+
 import io.paperdb.Paper;
 import pl.lo3.list.databinding.ActivityMainBinding;
 
@@ -24,11 +26,12 @@ public class MainActivity extends AppCompatActivity {
 	private Toolbar toolbar;
 	//CSVAdapter mAdapter;
     PaperAdapter mAdapter;
+    ActivityMainBinding binding;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-        ActivityMainBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
+        binding= DataBindingUtil.setContentView(this, R.layout.activity_main);
 
         Paper.init(getApplicationContext());
 
@@ -42,19 +45,28 @@ public class MainActivity extends AppCompatActivity {
 		//which our Adapter extends. In this example though it is unused,
 		//so we'll pass it a "dummy" value of -1.
 		//mAdapter = new CSVAdapter(this, -1);
-        mAdapter = new PaperAdapter(this, -1);
+     //   mAdapter = new PaperAdapter(this, -1);
 		
 		//attach our Adapter to the ListView. This will populate all of the rows.
-		binding.mList.setAdapter(mAdapter);
+	//	binding.mList.setAdapter(mAdapter);
 
 		//FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
 		binding.fab.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
-				Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-						.setAction("Action", null).show();
-				Intent intent = new Intent(getApplicationContext(),ParameterActivity.class);
-				startActivity(intent);
+
+
+                List<String> allKeys = Paper.book().getAllKeys();
+                if (allKeys.size()<MyApp.MAXENTRIES) {
+
+                    Intent intent = new Intent(getApplicationContext(), ParameterActivity.class);
+                    startActivityForResult(intent, 1);
+                }
+                else
+                {
+                    Snackbar.make(view, "Nie mozna dodać wiecj niż " + MyApp.MAXENTRIES + "wierszy", Snackbar.LENGTH_LONG)
+                            .setAction("Action", null).show();
+                }
 
 			}
 		});
@@ -66,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
 		 * 
 		 * For now we'll just show a Toast with the state capital for the state that was clicked.
 		 */
-		binding.mList.setOnItemClickListener(new OnItemClickListener() {
+		binding.mList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 			@Override
 			public void onItemClick(AdapterView<?> parent, View v, int pos,long id) {
 
@@ -84,5 +96,28 @@ public class MainActivity extends AppCompatActivity {
 
 			}
 		});
+
 	}
+//    @Override
+//    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+//
+//        if (requestCode == 1) {
+//            if(resultCode == Activity.RESULT_OK){
+//                mAdapter.notifyDataSetChanged();
+//                binding.mList.invalidate();
+//                            }
+//            if (resultCode == Activity.RESULT_CANCELED) {
+//                //Write your code if there's no result
+//            }
+//        }
+//    }//onActivityResult
+    @Override
+    protected void onResume() {
+        super.onResume();
+		mAdapter  = new PaperAdapter(this, -1);;
+        binding.mList.setAdapter(mAdapter);
+
+        mAdapter.notifyDataSetChanged();
+
+    }
 }

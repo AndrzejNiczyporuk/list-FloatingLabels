@@ -1,6 +1,8 @@
 package pl.lo3.list;
 
+import android.app.Activity;
 import android.app.TimePickerDialog;
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -109,7 +111,8 @@ public class ParameterActivity extends AppCompatActivity {
         binding.btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent returnIntent = new Intent();
+                setResult(Activity.RESULT_CANCELED, returnIntent);
 
                 if (submitForm())
                 {
@@ -142,11 +145,14 @@ public class ParameterActivity extends AppCompatActivity {
                     {// pobierz listę i dodaj 1 jako nowy obiekt
                         List<String> allKeys = Paper.book().getAllKeys();
                         tmpId=allKeys.size()+1;
-                        tmpD.setId(tmpId);
+
                     }
+                    tmpD.setId(tmpId);
                     Paper.book().write(String.valueOf(tmpId), tmpD);
                     Toast.makeText(getApplicationContext(), R.string.Conform, Toast.LENGTH_SHORT).show();
-                    //aa.notifyDataSetChanged();
+
+//                    returnIntent.putExtra("result",1);
+//                    setResult(Activity.RESULT_OK,returnIntent);
                     finish();
 
                 }
