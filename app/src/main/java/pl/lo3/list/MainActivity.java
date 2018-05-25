@@ -35,22 +35,14 @@ public class MainActivity extends AppCompatActivity {
 
         Paper.init(getApplicationContext());
 
-	//	toolbar = (Toolbar) findViewById(R.id.toolbar);
+
 		setSupportActionBar(binding.toolbar);
 
-		//Lookup our ListView
-		//ListView mList = (ListView)findViewById(R.id.mList);
-		
-		//Create Adapter. The second parameter is required by ArrayAdapter
-		//which our Adapter extends. In this example though it is unused,
-		//so we'll pass it a "dummy" value of -1.
-		//mAdapter = new CSVAdapter(this, -1);
-     //   mAdapter = new PaperAdapter(this, -1);
+        mAdapter = new PaperAdapter(this, -1);
 		
 		//attach our Adapter to the ListView. This will populate all of the rows.
-	//	binding.mList.setAdapter(mAdapter);
+		binding.mList.setAdapter(mAdapter);
 
-		//FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
 		binding.fab.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
@@ -60,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
                 if (allKeys.size()<MyApp.MAXENTRIES) {
 
                     Intent intent = new Intent(getApplicationContext(), ParameterActivity.class);
-                    startActivityForResult(intent, 1);
+                    startActivity(intent);
                 }
                 else
                 {
@@ -86,38 +78,24 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra("id",""+mAdapter.getItem(pos).getId());
 				intent.putExtra("land",""+mAdapter.getItem(pos).getLand().trim());
                 intent.putExtra("city",""+mAdapter.getItem(pos).getCity().trim());
-				intent.putExtra("stop",""+mAdapter.getItem(pos).getStopNumber() + "-" +mAdapter.getItem(pos).getStopName().trim());
-				intent.putExtra("line",""+mAdapter.getItem(pos).getLineNumber() + "-" +mAdapter.getItem(pos).getLineDirection().trim());
+				intent.putExtra("stop",""+mAdapter.getItem(pos).getStopName() + "(" +mAdapter.getItem(pos).getStopNumber()+")");
+				intent.putExtra("line",""+mAdapter.getItem(pos).getLineNumber());
 				intent.putExtra("from",""+mAdapter.getItem(pos).getFrom().getTime());
 				intent.putExtra("down",""+mAdapter.getItem(pos).getDown().getTime());
 				startActivity(intent);
-
-				//Toast.makeText(v.getContext(), mAdapter.getItem(pos).getCity(), Toast.LENGTH_SHORT).show();
 
 			}
 		});
 
 	}
-//    @Override
-//    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-//
-//        if (requestCode == 1) {
-//            if(resultCode == Activity.RESULT_OK){
-//                mAdapter.notifyDataSetChanged();
-//                binding.mList.invalidate();
-//                            }
-//            if (resultCode == Activity.RESULT_CANCELED) {
-//                //Write your code if there's no result
-//            }
-//        }
-//    }//onActivityResult
+
     @Override
     protected void onResume() {
         super.onResume();
 		mAdapter  = new PaperAdapter(this, -1);;
         binding.mList.setAdapter(mAdapter);
 
-        mAdapter.notifyDataSetChanged();
+
 
     }
 }

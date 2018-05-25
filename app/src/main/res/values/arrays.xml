@@ -1,0 +1,1043 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="stop_array">
+        <item>11 Listopada / Park (218)</item>
+        <item>11 Listopada / Stadion (217)</item>
+        <item>11 Listopada / Szpital (216)</item>
+        <item>42. Pułku Piechoty / Brzechwy (200)</item>
+        <item>42. Pułku Piechoty / Chabrowa (201)</item>
+        <item>42. Pułku Piechoty / Dolistowska (194)</item>
+        <item>42. Pułku Piechoty / Fredry (193)</item>
+        <item>42. Pułku Piechoty / Robotnicza (192)</item>
+        <item>42. Pułku Piechoty / Robotnicza (202)</item>
+        <item>Akademicka (207)</item>
+        <item>Akcent ZOO (673)</item>
+        <item>al. Jana Pawła II / Biawar (592)</item>
+        <item>al. Jana Pawła II / Cent. Handl. (602)</item>
+        <item>al. Jana Pawła II / Kościół (599)</item>
+        <item>al. Jana Pawła II / Makro   (604)</item>
+        <item>al. Jana Pawła II / Pomnik (600)</item>
+        <item>al. Jana Pawła II / Rzeka Biała (593)</item>
+        <item>al. Jana Pawła II / St.Paliw (603)</item>
+        <item>al. Jana Pawła II / WSP (591)</item>
+        <item>al.Jana Pawła II / Hotel Leśny (601)</item>
+        <item>al.Jana Pawła II / Hotel Leśny (605)</item>
+        <item>al.Niepodległości/Garaże (271)</item>
+        <item>al.Niepodległości/Lawendowa (267)</item>
+        <item>al.Niepodległości/Magnoliowa (268)</item>
+        <item>al.Niepodległości/Szkoła (272)</item>
+        <item>Andersa / Bitwy Białostockiej (473)</item>
+        <item>Andersa / Elektrociepłownia (474)</item>
+        <item>Andersa / Fabryka Mebli (475)</item>
+        <item>Andersa / Fabryka Mebli (461)</item>
+        <item>Andersa / Tysiąclecia (470)</item>
+        <item>Andersa / Tysiąclecia (465)</item>
+        <item>Andersa / Uchwyty (462)</item>
+        <item>Andersa / Wasilkowska (476)</item>
+        <item>Andrukiewicza / Sybiarków (298)</item>
+        <item>Antoniewicza (681)</item>
+        <item>Antoniewicza (680)</item>
+        <item>Antoniuk F. / Gajowa (007)</item>
+        <item>Antoniuk F. / Hallera (005)</item>
+        <item>Antoniuk F. / Jarzębinowa (006)</item>
+        <item>Antoniuk F. / Konstytucji 3 Maja (002)</item>
+        <item>Antoniuk F. / Ogrodniczki (003)</item>
+        <item>Antoniuk F. / Swobodna (001)</item>
+        <item>Antoniukowska / Świętokrzyska (004)</item>
+        <item>Antoniukowska / Wierzbowa (011)</item>
+        <item>Armii Krajowej/Bat. Chłopskich (019)</item>
+        <item>Armii Krajowej/Pętla (021)</item>
+        <item>Armii Krajowej/Powstańców (016)</item>
+        <item>Armii Krajowej/Szkoła (018)</item>
+        <item>Armii Krajowej/Szkoła (017)</item>
+        <item>Artyleryjska (084)</item>
+        <item>Atrium Biała (284)</item>
+        <item>Automobilklub (069)</item>
+        <item>Baranki (454)</item>
+        <item>Baranowicka / Ciołkowskiego (026)</item>
+        <item>Baranowicka / Gródecka (028)</item>
+        <item>Baranowicka / Leśna (033)</item>
+        <item>Baranowicka / Plażowa (024)</item>
+        <item>Baranowicka / Plażowa (032)</item>
+        <item>Baranowicka / Wczasowa (035)</item>
+        <item>Baranowicka / Wczasowa (036)</item>
+        <item>Baranowicka/Sowlańska (027)</item>
+        <item>Baranowicka/Zaścianki (030)</item>
+        <item>Bażantarnia (278)</item>
+        <item>Białówny (422)</item>
+        <item>Biele (837)</item>
+        <item>Bitwy Białostockiej / Bank (558)</item>
+        <item>Bitwy Białostockiej / Kombatantów (556)</item>
+        <item>Bitwy Białostockiej / Tysiąclecia (557)</item>
+        <item>Boboli (054)</item>
+        <item>Boboli (053)</item>
+        <item>Boboli / Cmentarz (023)</item>
+        <item>Boboli/Pętla (022)</item>
+        <item>Bogdanki/Szkoła (455)</item>
+        <item>Bogdanki/Wieś (453)</item>
+        <item>Boh. Getta / Bank (314)</item>
+        <item>Boh. Getta / Poleska (315)</item>
+        <item>Boh. M. Cassino / Sosnowa (060)</item>
+        <item>Boh. M. Cassino / Św.Rocha (058)</item>
+        <item>Borsukówka (881)</item>
+        <item>Borsukówka/Pętla (880)</item>
+        <item>Branickiego / Baranowicka (066)</item>
+        <item>Branickiego / Miłosza (063)</item>
+        <item>Branickiego / Nowowarszawska (065)</item>
+        <item>Branickiego / Piastowska (068)</item>
+        <item>Branickiego / Świętojańska (062)</item>
+        <item>Branickiego / Teatr (061)</item>
+        <item>Branickiego / Urząd Miejski (996)</item>
+        <item>Broniewskiego (122)</item>
+        <item>Brończany (910)</item>
+        <item>Brończany (905)</item>
+        <item>Brzechwy / 42. Pułku Piechoty (070)</item>
+        <item>Brzoskwiniowa / Daliowa (708)</item>
+        <item>Brzoskwiniowa / Daliowa (710)</item>
+        <item>Brzoskwiniowa / Mickiewicza (694)</item>
+        <item>Brzoskwiniowa / Mickiewicza (695)</item>
+        <item>Cerkiew Proroka Eliasza (316)</item>
+        <item>Cerkiew Św. Jerzego (606)</item>
+        <item>Chełmońskiego / Janickiego (086)</item>
+        <item>Chełmońskiego / Kazimierza Wlk. (087)</item>
+        <item>Chełmońskiego / Matejki (072)</item>
+        <item>Chełmońskiego / Rubinowicza (071)</item>
+        <item>Chełmońskiego / Szymanowskiego (088)</item>
+        <item>Chłodna (654)</item>
+        <item>Choroszcz / Akacjowa (864)</item>
+        <item>Choroszcz / Cmentarz (937)</item>
+        <item>Choroszcz / Dominikańska (939)</item>
+        <item>Choroszcz / Mickiewicza (865)</item>
+        <item>Choroszcz / Piaskowa (938)</item>
+        <item>Choroszcz / Piaskowa (936)</item>
+        <item>Choroszcz / Powst.Styczniowego (854)</item>
+        <item>Choroszcz / Rynek (856)</item>
+        <item>Choroszcz / Rynek (857)</item>
+        <item>Choroszcz / Sienkiewicza (863)</item>
+        <item>Choroszcz / Szkoła (859)</item>
+        <item>Choroszcz / Szpital (858)</item>
+        <item>Choroszcz / Szpital (855)</item>
+        <item>Choroszcz / Warszawska (934)</item>
+        <item>Choroszcz / Warszawska (933)</item>
+        <item>Choroszcz / Zastawie (935)</item>
+        <item>Choroszczańska (121)</item>
+        <item>Ciasne (876)</item>
+        <item>Ciasne / Osada (941)</item>
+        <item>Ciasne / Osada (940)</item>
+        <item>Ciołkowskiego / Grabówka (782)</item>
+        <item>Ciołkowskiego / Grabówka (789)</item>
+        <item>Ciołkowskiego / IMGW (076)</item>
+        <item>Ciołkowskiego / IMGW (083)</item>
+        <item>Ciołkowskiego / Mickiewicza (081)</item>
+        <item>Ciołkowskiego / Mickiewicza (074)</item>
+        <item>Ciołkowskiego / Opolska (025)</item>
+        <item>Ciołkowskiego / Sulika (730)</item>
+        <item>Ciołkowskiego/Baranowicka (786)</item>
+        <item>Ciołkowskiego/Gen.N.Sulika (785)</item>
+        <item>Ciołkowskiego/Obrębowa (787)</item>
+        <item>Ciołkowskiego/Plażowa (788)</item>
+        <item>Ciołkowskiego/Składy Budowlane (783)</item>
+        <item>Ciołkowskiego/Zaściańska (784)</item>
+        <item>Cmentarz Św. Rocha (163)</item>
+        <item>Czerewki DPS (739)</item>
+        <item>Czerewki/Kożany (747)</item>
+        <item>Częstochowska (300)</item>
+        <item>Dąbrowskiego P.K. (998)</item>
+        <item>Dąbrowskiego P.K. (999)</item>
+        <item>Dobrzyniewo Duże / Białostocka (916)</item>
+        <item>Dobrzyniewo Duże / Białostocka (897)</item>
+        <item>Dobrzyniewo Duże / Cegielnia (845)</item>
+        <item>Dobrzyniewo Duże / Cegielnia (899)</item>
+        <item>Dobrzyniewo Duże / GCK (917)</item>
+        <item>Dobrzyniewo Duże / GCK (887)</item>
+        <item>Dobrzyniewo Duże / Kolonia (885)</item>
+        <item>Dobrzyniewo Duże / Sklep (886)</item>
+        <item>Dobrzyniewo Duże / Sklep (846)</item>
+        <item>Dobrzyniewo Duże / Szkoła (847)</item>
+        <item>Dobrzyniewo Duże / Urząd Gminy (915)</item>
+        <item>Dobrzyniewo Duże / Urząd Gminy (898)</item>
+        <item>Dobrzyniewo Fabryczne (891)</item>
+        <item>Dobrzyniewo Fabryczne (841)</item>
+        <item>Dobrzyniewo Fabryczne / Królewska (842)</item>
+        <item>Dobrzyniewo Fabryczne / Królewska (890)</item>
+        <item>Dobrzyniewo Fabryczne / Polna (745)</item>
+        <item>Dobrzyniewo Kościelne (888)</item>
+        <item>Dobrzyniewo Kościelne (844)</item>
+        <item>Dobrzyniewo Kościelne / Kościół (639)</item>
+        <item>Dojlidy Cmentarz I (098)</item>
+        <item>Dojlidy Cmentarz I (630)</item>
+        <item>Dojlidy Cmentarz II (620)</item>
+        <item>Dojlidy Fabr. / Centrum Dojlidy (091)</item>
+        <item>Dojlidy Fabr. / Dojnowska (094)</item>
+        <item>Dojlidy Fabryczne (095)</item>
+        <item>Dojlidy G. / Ananasowa (664)</item>
+        <item>Dojlidy G. / Brzoskwiniowa (696)</item>
+        <item>Dojlidy G. / Brzoskwiniowa (705)</item>
+        <item>Dojlidy G. / Cytrynowa (665)</item>
+        <item>Dojlidy G. / Grabowa (697)</item>
+        <item>Dojlidy G. / Grabowa (706)</item>
+        <item>Dojlidy G. / Kameliowa (942)</item>
+        <item>Dojlidy G. / Kameliowa (943)</item>
+        <item>Dojlidy G. / Zalesie (703)</item>
+        <item>Dojlidy G. / Zalesie (702)</item>
+        <item>Dojlidy Górne (701)</item>
+        <item>Dojlidy Plaża (319)</item>
+        <item>Dojnowska / Plażowa (049)</item>
+        <item>Dojnowska / Sowlańska (038)</item>
+        <item>Dojnowska / Społem (040)</item>
+        <item>Dolistowska / 42. Pułku Piechoty (096)</item>
+        <item>Dolistowska / Dolistówka (100)</item>
+        <item>Dolistowska / Ogr. Działk. Pieczurki (097)</item>
+        <item>Domy Studenta (588)</item>
+        <item>Dorożki (534)</item>
+        <item>Dorożki Kolonia (736)</item>
+        <item>Dubois / Pawilon (102)</item>
+        <item>Dworzec PKP (158)</item>
+        <item>Dworzec PKP (596)</item>
+        <item>Dworzec PKP (159)</item>
+        <item>Dworzec PKS (008)</item>
+        <item>Dworzec PKS (059)</item>
+        <item>Dworzec PKS (1008)</item>
+        <item>Dworzec PKS (057)</item>
+        <item>Dziesięciny (046)</item>
+        <item>Dziesięciny / Pętla (045)</item>
+        <item>Ekologiczna (609)</item>
+        <item>Ekologiczna (610)</item>
+        <item>Elektrociepłownia (472)</item>
+        <item>Elewatorska / Fadom (118)</item>
+        <item>Elewatorska / Fadom (111)</item>
+        <item>Elewatorska / Polmos (112)</item>
+        <item>Elewatorska / Polmos (117)</item>
+        <item>Elewatorska / PZZ (116)</item>
+        <item>Elewatorska / PZZ (113)</item>
+        <item>Elewatorska / Stadion (114)</item>
+        <item>Elewatorska / Stadion (115)</item>
+        <item>Eliasza / WSAP (690)</item>
+        <item>Fabryka Dywanów (471)</item>
+        <item>Fabryka Dywanów (464)</item>
+        <item>Fasty (724)</item>
+        <item>Fasty (721)</item>
+        <item>Fasty / Dobrzyniewska (892)</item>
+        <item>Fasty / Dobrzyniewska (840)</item>
+        <item>Fasty / Giełda (719)</item>
+        <item>Fasty / Giełda (720)</item>
+        <item>Fasty / Przystanek PKS (723)</item>
+        <item>Fasty / Przystanek PKS (722)</item>
+        <item>Fasty / Warsztat (725)</item>
+        <item>Firma NEXMAR (807)</item>
+        <item>Firma NEXMAR (806)</item>
+        <item>Gajowa / Pętla (128)</item>
+        <item>Gajowa / Zagórna (129)</item>
+        <item>Gajowa / Zagórna (126)</item>
+        <item>Galeria "Zielone Wzgórze" (266)</item>
+        <item>Galeria Alfa (208)</item>
+        <item>Gen. A.E. Fieldorfa "Nila" (137)</item>
+        <item>Gen.Hallera/Dziesięciny (1045)</item>
+        <item>Geodetów (064)</item>
+        <item>Geodetów (067)</item>
+        <item>Gniła / Kolonia (884)</item>
+        <item>Gniła / Kolonia (918)</item>
+        <item>Gniła 1 (932)</item>
+        <item>Gniła 1 (931)</item>
+        <item>Gniła 2 (848)</item>
+        <item>Gniła 2 (896)</item>
+        <item>Gniła 3 (977)</item>
+        <item>Gniła Laski (978)</item>
+        <item>Grabówka / Dębowa (793)</item>
+        <item>Grabówka / Jeżynowa (769)</item>
+        <item>Grabówka / Jodłowa (791)</item>
+        <item>Grabówka / Klubowa (795)</item>
+        <item>Grabówka / Klubowa (792)</item>
+        <item>Grabówka / Kościół (798)</item>
+        <item>Grabówka / Kościół (790)</item>
+        <item>Grabówka / Macierzankowa (760)</item>
+        <item>Grabówka / Mniszkowa (759)</item>
+        <item>Grabówka / Myśliwska (794)</item>
+        <item>Grabówka / Pomnik (758)</item>
+        <item>Grabówka / Rondo (714)</item>
+        <item>Grabówka / Szosa Baranowicka (796)</item>
+        <item>Grabówka / Szosa Baranowicka (767)</item>
+        <item>Grabówka/Leszczynowa (780)</item>
+        <item>Grabówka/Malinowa (781)</item>
+        <item>Grabówka/Orzechowa (797)</item>
+        <item>Grabówka/Orzechowa (799)</item>
+        <item>Halicka (926)</item>
+        <item>Halicka / Leśnej Jagody (688)</item>
+        <item>Halicka / Lubczykowa (689)</item>
+        <item>Halicka / Margerytki (925)</item>
+        <item>Hallera / Brzozowa (042)</item>
+        <item>Hallera / Gajowa (048)</item>
+        <item>Hallera / Kościół (041)</item>
+        <item>Hallera / Palmowa (047)</item>
+        <item>Hallera / Parking (043)</item>
+        <item>Herberta (155)</item>
+        <item>Hermanówka (955)</item>
+        <item>Hetmańska / Fieldorfa (138)</item>
+        <item>Hetmańska / Gruntowa (133)</item>
+        <item>Hetmańska / Marczukowska (131)</item>
+        <item>Hetmańska / Marczukowska (135)</item>
+        <item>Hetmańska / Os. Zielone Wzg. (140)</item>
+        <item>Hetmańska / Piekarnia (579)</item>
+        <item>Hetmańska / PKP Energetyka (580)</item>
+        <item>Hetmańska / Popiełuszki (139)</item>
+        <item>Hetmańska / Promienna (134)</item>
+        <item>Hetmańska / Promienna (132)</item>
+        <item>Hołówki Duże (103)</item>
+        <item>Hołówki Małe (104)</item>
+        <item>Horodniany (754)</item>
+        <item>Horodniany (753)</item>
+        <item>Hotel Podlasie (204)</item>
+        <item>Hotel Turkus (598)</item>
+        <item>Hryniewicze (811)</item>
+        <item>Hryniewicze (821)</item>
+        <item>Hryniewicze / MPRD (812)</item>
+        <item>Hryniewicze / MPRD (820)</item>
+        <item>Hryniewicze / Wysypisko (819)</item>
+        <item>Hryniewicze / Wysypisko (813)</item>
+        <item>Hurtowa (276)</item>
+        <item>Hurtowa I (280)</item>
+        <item>Ignatki (913)</item>
+        <item>Ignatki (902)</item>
+        <item>Ignatki / Przemysłowa (661)</item>
+        <item>Ignatki / Przemysłowa (653)</item>
+        <item>Ignatki / Zakłady (658)</item>
+        <item>Ignatki / Zakłady (660)</item>
+        <item>Izabelin (801)</item>
+        <item>Izabelin (803)</item>
+        <item>Jacka Kuronia (247)</item>
+        <item>Jagiellońska (242)</item>
+        <item>Jagienki / Ciepła (330)</item>
+        <item>Jagienki / Wąska (335)</item>
+        <item>Janowicze / Pętla (948)</item>
+        <item>Janowicze nr 1A (666)</item>
+        <item>Janowicze/Kolonia (949)</item>
+        <item>Juchnowiec (835)</item>
+        <item>Juchnowiec / Jaśminowa (923)</item>
+        <item>Juchnowiec / Jaśminowa (924)</item>
+        <item>Juchnowiec / Mleczarnia (827)</item>
+        <item>Juchnowiec / Pętla (826)</item>
+        <item>Juchnowiec / Wieś (825)</item>
+        <item>Juchnowiec D./Wólka (838)</item>
+        <item>Juchnowiec D./Wólka (893)</item>
+        <item>Juchnowiec Dolny / Kolonia (828)</item>
+        <item>Juchnowiec Kościelny (908)</item>
+        <item>Juchnowiec Kościelny (907)</item>
+        <item>Juchnowiec/Młyn (829)</item>
+        <item>Juchnowiec/Młyn (830)</item>
+        <item>Juchnowiec/PKS (816)</item>
+        <item>Jurowce (731)</item>
+        <item>Jurowce / Kamienna (077)</item>
+        <item>Jurowce / Kamienna (089)</item>
+        <item>Jurowce / Wiadukt (733)</item>
+        <item>Jurowce / Wieś (738)</item>
+        <item>Jurowce/Most (732)</item>
+        <item>Jurowce/Zakład Stolarski (740)</item>
+        <item>Jurowce/Zakład Stolarski (729)</item>
+        <item>Jurowiecka / Sienkiewicza (142)</item>
+        <item>Jurowiecka / Sienkiewicza (143)</item>
+        <item>Jurowiecka/Ciepła (144)</item>
+        <item>Kaczorowskiego / Cieszyńska (220)</item>
+        <item>Kaczorowskiego / OiFP (222)</item>
+        <item>Kaczorowskiego / Waszyngtona (221)</item>
+        <item>Kaczorowskiego / Wyszyńskiego (223)</item>
+        <item>Kaczorowskiego / Zwierzyniecka (530)</item>
+        <item>Kalinowskiego / OiFP (443)</item>
+        <item>Kalinowskiego / Teatr Lalek (446)</item>
+        <item>Kampus UwB (215)</item>
+        <item>Kapralska / Pionerska (479)</item>
+        <item>Kapralska / Pusta (482)</item>
+        <item>Karakule (411)</item>
+        <item>Karakule (1408)</item>
+        <item>Karakule / Bagnowska (866)</item>
+        <item>Karakule / Bagnowska (871)</item>
+        <item>Karakule / Cmentarz (408)</item>
+        <item>Karakule / Klasztorna (929)</item>
+        <item>Karakule / Klasztorna (928)</item>
+        <item>Karakule / Turystyczna (867)</item>
+        <item>Karakule / Wąska (870)</item>
+        <item>Karakule Las (930)</item>
+        <item>Karakule Las (927)</item>
+        <item>Kaszmirowa (365)</item>
+        <item>Kaszmirowa (364)</item>
+        <item>Katrynka (950)</item>
+        <item>Kawaleryjska / Bazar (148)</item>
+        <item>Kawaleryjska / Bazar (151)</item>
+        <item>Kawaleryjska / Zapiecek (152)</item>
+        <item>Kawaleryjska / Zapiecek (147)</item>
+        <item>Kawaleryjska/Pułaskiego (150)</item>
+        <item>Kazimierza Wlk. / 42. Pułku Piechoty (676)</item>
+        <item>Kazimierza Wlk. / 42. Pułku Piechoty (677)</item>
+        <item>Kazimierza Wlk. / Chełmońskiego (679)</item>
+        <item>Kazimierza Wlk. / Chełmońskiego (678)</item>
+        <item>Kazimierza Wlk. / Raginisa (685)</item>
+        <item>Kazimierza Wlk. / Sulika (668)</item>
+        <item>Kazimierza Wlk. / Trawiasta (682)</item>
+        <item>Kazimierza Wlk. / Trawiasta (684)</item>
+        <item>KEN / Kołłątaja (336)</item>
+        <item>KEN / NSZ (166)</item>
+        <item>KEN / Pietkiewicza (169)</item>
+        <item>KEN / Pietkuna (337)</item>
+        <item>KEN / Pietkuna (646)</item>
+        <item>Kleeberga (467)</item>
+        <item>Kleeberga / Wróblewskiego (468)</item>
+        <item>Kleosin (743)</item>
+        <item>Kleosin / Baczyńskiego (742)</item>
+        <item>Kleosin / Klasztor (741)</item>
+        <item>Klepacka (184)</item>
+        <item>Klepacka (185)</item>
+        <item>Klepacze (233)</item>
+        <item>Klepacze / Remiza (234)</item>
+        <item>Klepacze / Sklep (232)</item>
+        <item>Klewinowo / Pętla (554)</item>
+        <item>Klewinowo Nowe (555)</item>
+        <item>Klonowa (051)</item>
+        <item>Knyszyńska (012)</item>
+        <item>Kolbego / Grota-Roweckiego (180)</item>
+        <item>Kolbego / Kościół (179)</item>
+        <item>Kolbego / Raginisa (450)</item>
+        <item>Kolbego / Staffa (186)</item>
+        <item>Kolonia Koplany (903)</item>
+        <item>Kolonia Koplany (912)</item>
+        <item>Kolonia Lewickie (833)</item>
+        <item>Kolonia Lewickie (834)</item>
+        <item>Kołłątaja (168)</item>
+        <item>Kołłątaja (340)</item>
+        <item>Kołłątaja / Bacieczki (641)</item>
+        <item>Kołłątaja / Bacieczki (644)</item>
+        <item>Kołłątaja / Dworska (640)</item>
+        <item>Kołłątaja / Dworska (645)</item>
+        <item>Kołłątaja / KEN (642)</item>
+        <item>Kołłątaja / Mackiewicza (643)</item>
+        <item>Kombatantów (214)</item>
+        <item>Komenda Wojewódzka Policji (418)</item>
+        <item>Konst. 3 Maja / al. Jana Pawła II (170)</item>
+        <item>Konst.3 Maja / Rzemieślnicza (161)</item>
+        <item>Konst.3 Maja / Studzienna (162)</item>
+        <item>Konst.3 Maja / Swobodna (165)</item>
+        <item>Konst.3 Maja / Wysoki Stoczek (164)</item>
+        <item>Konwaliowa (585)</item>
+        <item>Konwaliowa (582)</item>
+        <item>Końcowa (962)</item>
+        <item>Końcowa (963)</item>
+        <item>Końcowa/Liliowa (652)</item>
+        <item>Końcowa/Liliowa (659)</item>
+        <item>Kopernika / Bema (174)</item>
+        <item>Kopernika / Depowa (172)</item>
+        <item>Kopernika / Kaczorowskiego (224)</item>
+        <item>Kopernika / Kanonierska (171)</item>
+        <item>Kopernika / Składowa (177)</item>
+        <item>Kopernika / Stacja Paliw (175)</item>
+        <item>Kopernika / Tunel (178)</item>
+        <item>Koplany / Cegielnia (911)</item>
+        <item>Koplany / Cegielnia (904)</item>
+        <item>Kościół Św. Ojca Pio (238)</item>
+        <item>Kościół Św.Jadwigi (345)</item>
+        <item>Kościół Św.Rocha (211)</item>
+        <item>Kościół Św.Wojciecha (512)</item>
+        <item>KPK Zajezdnia (1000)</item>
+        <item>KPKM Zajezdnia (1001)</item>
+        <item>Krzywoustego / Raginisa (686)</item>
+        <item>Krzywoustego / Wysockiego (687)</item>
+        <item>Książnica Podlaska (447)</item>
+        <item>Księżyno / Bociania (756)</item>
+        <item>Księżyno / Borsucza (749)</item>
+        <item>Księżyno / Kościół (752)</item>
+        <item>Księżyno / Krokusowa (922)</item>
+        <item>Księżyno / Krokusowa (921)</item>
+        <item>Księżyno / Niedźwiedzia (748)</item>
+        <item>Księżyno / Niewodnicka (755)</item>
+        <item>Księżyno / Vega (751)</item>
+        <item>Kuriany (625)</item>
+        <item>Kuriany PKS (626)</item>
+        <item>Kuriany PKS (623)</item>
+        <item>Kuriany/Pętla (624)</item>
+        <item>Kuronia / Myśliwska (374)</item>
+        <item>Kuronia / Żurawia (157)</item>
+        <item>KZK Zajezdnia (1002)</item>
+        <item>Legionowa / Piękna (183)</item>
+        <item>Legionowa / Szkoła (181)</item>
+        <item>Leśna Dolina (020)</item>
+        <item>Letnia (052)</item>
+        <item>Lewickie / Ogr. Działkowe (823)</item>
+        <item>Lewickie / Ogr. Działkowe (824)</item>
+        <item>Lewickie Kolonia (957)</item>
+        <item>Lewickie PKS (818)</item>
+        <item>Lewickie PKS (814)</item>
+        <item>Lewickie Stacja (906)</item>
+        <item>Lewickie Stacja (909)</item>
+        <item>Lewickie Stacja / Osada (914)</item>
+        <item>Lewickie Stacja / Osada (919)</item>
+        <item>Lewickie/Firma CHM (815)</item>
+        <item>Lewickie/Firma CHM (817)</item>
+        <item>Lipowa / Nowy Świat (210)</item>
+        <item>Lipowa / Św. Rocha (206)</item>
+        <item>Lodowa / Św. Krzysztofa (965)</item>
+        <item>Lodowa / Św. Krzysztofa (960)</item>
+        <item>Logarytmiczna (616)</item>
+        <item>Lokomotywownia (176)</item>
+        <item>Łomżyńska / Młynowa (056)</item>
+        <item>Łyski (861)</item>
+        <item>Łyski (852)</item>
+        <item>Łyski / Fabryka Okien (853)</item>
+        <item>Łyski / Fabryka Okien (808)</item>
+        <item>Maczka / Świętokrzyska (469)</item>
+        <item>Malmeda / Lipowa (309)</item>
+        <item>Malmeda / Zamenhofa (308)</item>
+        <item>Marczukowska / Piekarnia (549)</item>
+        <item>Marczukowska / Stroma (548)</item>
+        <item>Meksykańska / IPN (226)</item>
+        <item>Meksykańska / IPN (225)</item>
+        <item>Mickiewicza / Ciołkowskiego (240)</item>
+        <item>Mickiewicza / Grabowa (707)</item>
+        <item>Mickiewicza / Grabowa (709)</item>
+        <item>Mickiewicza / Grottgera (237)</item>
+        <item>Mickiewicza / Liceum (249)</item>
+        <item>Mickiewicza / Liceum (246)</item>
+        <item>Mickiewicza / Miłosza (243)</item>
+        <item>Mickiewicza / Ogródki Działkowe (700)</item>
+        <item>Mickiewicza / Ogródki Działkowe (699)</item>
+        <item>Mickiewicza / Orzeszkowej (244)</item>
+        <item>Mickiewicza / Wiewiórcza (241)</item>
+        <item>Mickiewicza / Wiewiórcza (698)</item>
+        <item>Mickiewicza / Zwierzyniecka (239)</item>
+        <item>Mieszka I / Apteka (251)</item>
+        <item>Mieszka I / Piastowska (255)</item>
+        <item>Mieszka I / Szkoła (252)</item>
+        <item>Miłosza / Branickiego (283)</item>
+        <item>Miłosza / Drewniana (285)</item>
+        <item>Miłosza / Kołodziejska (270)</item>
+        <item>Młynowa (015)</item>
+        <item>Muzeum Wsi (735)</item>
+        <item>Myśliwska (540)</item>
+        <item>Narewska (014)</item>
+        <item>Niedźwiedzia (373)</item>
+        <item>Niemeńska (395)</item>
+        <item>Niemeńska / Berezyńska (260)</item>
+        <item>Niemeńska / Czarnej Hańczy (261)</item>
+        <item>Niemeńska I (264)</item>
+        <item>Niemeńska II (265)</item>
+        <item>Niewodnica Korycka (750)</item>
+        <item>Niewodnica Korycka (693)</item>
+        <item>Niewodnica Nargilewska Kolonia (956)</item>
+        <item>Nowa Wygoda (196)</item>
+        <item>Nowodworce (872)</item>
+        <item>Nowodworce (873)</item>
+        <item>Nowodworce / Brzozowa (120)</item>
+        <item>Nowodworce / Brzozowa (119)</item>
+        <item>Nowodworce / Leszczynowa (415)</item>
+        <item>Nowodworce / Zaciszna (425)</item>
+        <item>Nowodworce PKS (412)</item>
+        <item>Nowodworce PKS (407)</item>
+        <item>Nowosiółki (860)</item>
+        <item>Nowosiółki (805)</item>
+        <item>NSZ / KEN (338)</item>
+        <item>NSZ / Ogródki Działkowe (145)</item>
+        <item>Oczyszczalnia (355)</item>
+        <item>Oczyszczalnia (358)</item>
+        <item>Ogrodniczki (410)</item>
+        <item>Ogrodniczki (409)</item>
+        <item>Ogrodniczki / Polna (878)</item>
+        <item>Ogrodniczki / Polna (874)</item>
+        <item>Ogrodniczki / Szkolna (869)</item>
+        <item>Ogrodniczki / Szkolna (868)</item>
+        <item>Ogrodniczki / Tartak (877)</item>
+        <item>Ogrodniczki / Tartak (875)</item>
+        <item>Ogrodniczki k/Juchnowca (947)</item>
+        <item>Ogrodniczki Stok (976)</item>
+        <item>Ogrodniczki Stok (975)</item>
+        <item>Ogrodniki (843)</item>
+        <item>Ogrodniki (889)</item>
+        <item>Oliwkowa (662)</item>
+        <item>Oliwkowa (663)</item>
+        <item>Olmonty / Chabrowa (969)</item>
+        <item>Olmonty / Chabrowa (972)</item>
+        <item>Olmonty / Jaworowa (802)</item>
+        <item>Olmonty / Jaworowa (966)</item>
+        <item>Olmonty / Leśna (968)</item>
+        <item>Olmonty / Leśna (973)</item>
+        <item>Olmonty / Miła (974)</item>
+        <item>Olmonty / Miła (967)</item>
+        <item>Olmonty / Wrzosowa (970)</item>
+        <item>Olmonty / Wrzosowa (971)</item>
+        <item>Ordonówny (010)</item>
+        <item>Orzechowa (460)</item>
+        <item>Orzechowa (463)</item>
+        <item>Osiedle Bema (173)</item>
+        <item>Osiedle Dojlidy (085)</item>
+        <item>Osiedle KZKS (228)</item>
+        <item>Osiedle KZKS (229)</item>
+        <item>Osiedle Pieczurki (099)</item>
+        <item>Owsiana (013)</item>
+        <item>Paderewskiego (296)</item>
+        <item>Paderewskiego (297)</item>
+        <item>Paderewskiego / Św. Jerzego (295)</item>
+        <item>Pałac Branickich (182)</item>
+        <item>Pałacowa / Hotel (281)</item>
+        <item>Pałacowa / Hotel (282)</item>
+        <item>Pańki (533)</item>
+        <item>Piasta (257)</item>
+        <item>Piasta / Andrukiewicza (289)</item>
+        <item>Piasta / Andrukiewicza (372)</item>
+        <item>Piasta / Przejazd (294)</item>
+        <item>Piasta / Skorupska (253)</item>
+        <item>Piasta / Włościańska (290)</item>
+        <item>Piastowska / Chrobrego (293)</item>
+        <item>Piastowska / Chrobrego (287)</item>
+        <item>Piastowska / Kazimierza Wlk. (669)</item>
+        <item>Piastowska / Kościół (288)</item>
+        <item>Piastowska / Mieszka I (292)</item>
+        <item>Piastowska / Nowowarszawska (286)</item>
+        <item>Piastowska / Piasta (675)</item>
+        <item>Piastowska / Piasta (291)</item>
+        <item>Pieleckiego / Pietkiewicza (339)</item>
+        <item>Pileckiego / Bacieczki TBS (167)</item>
+        <item>Piłsudskiego / Botaniczna (307)</item>
+        <item>Piłsudskiego / Częstochowska (302)</item>
+        <item>Piłsudskiego / Pałacowa (304)</item>
+        <item>Piłsudskiego / Rzeka Biała (305)</item>
+        <item>Piłsudskiego / Waryńskiego (306)</item>
+        <item>Pl. Jana Pawła II / Katedra (995)</item>
+        <item>Pl. Niepodległości (301)</item>
+        <item>Plac NZS (445)</item>
+        <item>Plac NZS (449)</item>
+        <item>Plażowa / Dojnowska (312)</item>
+        <item>Plażowa / Dojnowska (317)</item>
+        <item>Plażowa / Pozioma (318)</item>
+        <item>Plażowa / Pozioma (311)</item>
+        <item>Plażowa / Suchowolca (313)</item>
+        <item>Plażowa / Zuchów (310)</item>
+        <item>Pogodna / Bema (322)</item>
+        <item>Pogodna / Garaże (324)</item>
+        <item>Pogodna / Wiejska (321)</item>
+        <item>Pogodna/Żeromskiego (323)</item>
+        <item>Pogorzałki / Klub (883)</item>
+        <item>Pogorzałki / Klub (850)</item>
+        <item>Pogorzałki / Kolonia (882)</item>
+        <item>Pogorzałki / Kolonia (879)</item>
+        <item>Pogorzałki / Kościół (895)</item>
+        <item>Pogorzałki / Kościół (849)</item>
+        <item>Poleska / Czysta (327)</item>
+        <item>Poleska / Jagienki (331)</item>
+        <item>Poleska / Jurowiecka (328)</item>
+        <item>Poleska / Pogotowie (326)</item>
+        <item>Poleska / Pogotowie (334)</item>
+        <item>Poleska / Sitarska (333)</item>
+        <item>Poleska / Szkoła (329)</item>
+        <item>Poleska / Wiadukt (332)</item>
+        <item>Popiełuszki / Bat.Chł. (348)</item>
+        <item>Popiełuszki / Boboli (050)</item>
+        <item>Popiełuszki / Boboli (344)</item>
+        <item>Popiełuszki / Hetmańska (136)</item>
+        <item>Popiełuszki / Niepodległości (343)</item>
+        <item>Popiełuszki / Os.Słoneczny Stok (342)</item>
+        <item>Popiełuszki / Sikorskiego (430)</item>
+        <item>Porosły (809)</item>
+        <item>Porosły (804)</item>
+        <item>Porosły / Stacja Paliw (862)</item>
+        <item>Porosły / Stacja Paliw (851)</item>
+        <item>Produkcyjna (356)</item>
+        <item>Produkcyjna (507)</item>
+        <item>Produkcyjna (357)</item>
+        <item>Produkcyjna / Bacieczki (360)</item>
+        <item>Produkcyjna / CH Auchan (363)</item>
+        <item>Produkcyjna / Kleeberga (359)</item>
+        <item>Produkcyjna / Maczka (362)</item>
+        <item>Produkcyjna / Nadrzeczna (384)</item>
+        <item>Produkcyjna / Neptuna (351)</item>
+        <item>Produkcyjna / PEUiM (354)</item>
+        <item>Produkcyjna / PEUiM (361)</item>
+        <item>Produkcyjna / Saturna (352)</item>
+        <item>Proroka Eliasza (691)</item>
+        <item>Proroka Eliasza (692)</item>
+        <item>Przędzalniana (366)</item>
+        <item>Przędzalniana (369)</item>
+        <item>Przędzalniana / Fasty Osiedle (367)</item>
+        <item>Przędzalniana / Fasty Osiedle (368)</item>
+        <item>Przędzalniana / Szosa Ełcka   (371)</item>
+        <item>Przędzalniana / Szosa Ełcka   (370)</item>
+        <item>Pułaskiego / Kawaleryjska (375)</item>
+        <item>Pułaskiego / Przedszkole (376)</item>
+        <item>Pułaskiego / Szkoła (378)</item>
+        <item>Pułaskiego / Szkoła (379)</item>
+        <item>Pułaskiego / Wspólna (377)</item>
+        <item>Pułaskiego / Wspólna (380)</item>
+        <item>Pułaskiego / Zachodnia (381)</item>
+        <item>Radzymińska / Sanktuarium (385)</item>
+        <item>Radzymińska/Białostoczek (386)</item>
+        <item>Radzymińska/Sitarska (350)</item>
+        <item>Radzymińska/Szkoła (349)</item>
+        <item>Raginisa / Baśniowa (399)</item>
+        <item>Raginisa / Cm. Farny (396)</item>
+        <item>Raginisa / Cm. Farny (404)</item>
+        <item>Raginisa / Familijna (402)</item>
+        <item>Raginisa / Gwiazdkowa (259)</item>
+        <item>Raginisa / Kazimierza Wlk. (398)</item>
+        <item>Raginisa / Kolbego (403)</item>
+        <item>Raginisa / Ogródki Działkowe (405)</item>
+        <item>Raginisa / Ogródki Działkowe (414)</item>
+        <item>Raginisa / Trawiasta (397)</item>
+        <item>Raginisa / Trawiasta (413)</item>
+        <item>Raginisa / Uśmiechu (401)</item>
+        <item>Raginisa / Uśmiechu (400)</item>
+        <item>Raginisa / Wysockiego (406)</item>
+        <item>Rostołty (901)</item>
+        <item>Rumejki (831)</item>
+        <item>Rumejki (832)</item>
+        <item>Rumejki (979)</item>
+        <item>Rumuńska (231)</item>
+        <item>Rynek Kościuszki (416)</item>
+        <item>Rzeka Supraśl (737)</item>
+        <item>Sąd Rejonowy (248)</item>
+        <item>Sąd Rejonowy (704)</item>
+        <item>Sejneńska (279)</item>
+        <item>Sejneńska / Cementownia (277)</item>
+        <item>Sejneńska / Handlowa (275)</item>
+        <item>Sępia (545)</item>
+        <item>Sielachowskie (734)</item>
+        <item>Sienkiewicza (303)</item>
+        <item>Sienkiewicza / Ogrodowa (421)</item>
+        <item>Sienkiewicza / Ryska (419)</item>
+        <item>Sienkiewicza / Ryska (420)</item>
+        <item>Sienkiewicza / Rzeka Biała (417)</item>
+        <item>Sikorskiego (433)</item>
+        <item>Sikorskiego (428)</item>
+        <item>Sikorskiego (427)</item>
+        <item>Sikorskiego / Bat. Chł. (429)</item>
+        <item>Sikorskiego / Biawar (432)</item>
+        <item>Sikorskiego / Cerkiew (426)</item>
+        <item>Sikorskiego / Upalna (431)</item>
+        <item>Sikorskiego P.K. (993)</item>
+        <item>Sikorskiego P.K. (992)</item>
+        <item>Simuny (101)</item>
+        <item>Sitarska / Świętokrzyska (127)</item>
+        <item>Sklep Łowiecki (141)</item>
+        <item>Składowa / Hurtowa (440)</item>
+        <item>Składowa / Octowa (439)</item>
+        <item>Składowa / Stacja Paliw (437)</item>
+        <item>Składowa / Tunel (438)</item>
+        <item>Składowa / Urząd Miejski (436)</item>
+        <item>Składowa P.K. (441)</item>
+        <item>Skłodowskiej / Hortex (448)</item>
+        <item>Skrzetuskiego (657)</item>
+        <item>Sławińskiego / Jednostka Wojskowa (390)</item>
+        <item>Sławińskiego / Kawaleryjska (382)</item>
+        <item>Sławińskiego / Św. Jerzego (389)</item>
+        <item>Sławińskiego / Wspólna (383)</item>
+        <item>Słoneczna (493)</item>
+        <item>Słonecznikowa (346)</item>
+        <item>Słonimska / Urząd Miejski (254)</item>
+        <item>Słonimska / Urząd Miejski (256)</item>
+        <item>Sobolewo / Bociania (770)</item>
+        <item>Sobolewo / Niedźwiedzia (757)</item>
+        <item>Sobolewo / Pętla (761)</item>
+        <item>Sobolewo / Przejazd (766)</item>
+        <item>Sobolewo / Przejazd (765)</item>
+        <item>Sobolewo / Rondo (718)</item>
+        <item>Sobolewo / Sokola (764)</item>
+        <item>Sobolewo / Szkoła (762)</item>
+        <item>Sobolewo / Szkoła (763)</item>
+        <item>Sobolewo / Zajęcza (768)</item>
+        <item>Sochonie (727)</item>
+        <item>Sochonie / Os. Łan (728)</item>
+        <item>Sochonie / Os. Łan (726)</item>
+        <item>Sokola (542)</item>
+        <item>Sokólska / Szkoła (997)</item>
+        <item>Sokólska / Zagumienna (387)</item>
+        <item>Sosabowskiego / Kapralska (191)</item>
+        <item>Sosabowskiego / Krańcowa (203)</item>
+        <item>Sosabowskiego / Wasilkowska (478)</item>
+        <item>Sosnowskiego / Grunwaldzka (442)</item>
+        <item>Sosnowskiego / Wyszyńskiego (444)</item>
+        <item>Sowlany / Alejkowa (092)</item>
+        <item>Sowlany / Alejkowa (082)</item>
+        <item>Sowlany / Św.Marka (188)</item>
+        <item>Sowlany / Św.Marka (189)</item>
+        <item>Sowlany / Wiatrakowa (190)</item>
+        <item>Sowlany / Wojskowa (187)</item>
+        <item>Sowlańska / Piaskowa (034)</item>
+        <item>Sowlańska / Piaskowa (009)</item>
+        <item>Sowlańska/Dojnowska (039)</item>
+        <item>Sowlańska/Dojnowska (037)</item>
+        <item>Spokojna (273)</item>
+        <item>Spokojna (274)</item>
+        <item>Stadion Miejski (075)</item>
+        <item>Starosielce PKP (451)</item>
+        <item>Starosielce PKP (452)</item>
+        <item>Stoczni Gdańskiej / Kościół (635)</item>
+        <item>Stoczni Gdańskiej / Kościół (636)</item>
+        <item>Stoczni Gdańskiej / Milowa (637)</item>
+        <item>Stoczni Gdańskiej / Wodna (634)</item>
+        <item>Stoczni Gdańskiej / Zabłudowska (638)</item>
+        <item>Stoczni Gdańskiej / Zabłudowska (633)</item>
+        <item>Suchowolca / Cm. Prawosławny (631)</item>
+        <item>Suchowolca / Eliasza (613)</item>
+        <item>Suchowolca / Kościół (632)</item>
+        <item>Suchowolca / Myśliwska (093)</item>
+        <item>Suchowolca / Ordynacka (629)</item>
+        <item>Sulika / Ciołkowskiego (044)</item>
+        <item>Sulika / Szosa Baranowicka (946)</item>
+        <item>Swobodna (456)</item>
+        <item>Swobodna / Wysoki Stoczek (459)</item>
+        <item>Swobodna/Łagodna (457)</item>
+        <item>Swobodna/Szeroka (458)</item>
+        <item>Szerenosy (108)</item>
+        <item>Szosa Baranowicka / Sulika (945)</item>
+        <item>Szpital Zakaźny (532)</item>
+        <item>Szpital Zakaźny (541)</item>
+        <item>Ściegiennego (107)</item>
+        <item>Śląska (073)</item>
+        <item>Śląska (078)</item>
+        <item>Śródlesie (810)</item>
+        <item>Śródlesie (822)</item>
+        <item>Św. Jerzego (392)</item>
+        <item>Św. Jerzego / Dubois (391)</item>
+        <item>Św. Jerzego / Dubois (393)</item>
+        <item>Św. Jerzego / Żeromskiego (394)</item>
+        <item>Św. Krzysztofa / Kościół (964)</item>
+        <item>Św. Pio / Białowieska (671)</item>
+        <item>Św. Pio / Podleśna (672)</item>
+        <item>Święta Woda (779)</item>
+        <item>Świętokorzyska / Antoniukowska (124)</item>
+        <item>Świętokrzyska / Hallera (423)</item>
+        <item>Świętokrzyska / Kaplica (539)</item>
+        <item>Świętokrzyska / Maczka (466)</item>
+        <item>Świętokrzyska / Ogród Działkowy I (125)</item>
+        <item>Świętokrzyska / Ogród Działkowy II (160)</item>
+        <item>Technikum Elektryczne (498)</item>
+        <item>Towarowa (487)</item>
+        <item>Towarowa / Daleka (491)</item>
+        <item>Towarowa / Dw.Fabryczny (488)</item>
+        <item>Towarowa / Garaże (490)</item>
+        <item>Towarowa / Kraszewskiego (486)</item>
+        <item>Towarowa / Kraszewskiego (492)</item>
+        <item>Towarowa / Parking (489)</item>
+        <item>Towarowa / Piastowska (485)</item>
+        <item>Transportowa (495)</item>
+        <item>Transportowa / Składowa (611)</item>
+        <item>Transportowa / Składowa (608)</item>
+        <item>Transportowa / Straż Pożarna (612)</item>
+        <item>Traugutta / Ciasna (483)</item>
+        <item>Traugutta / Dw. Fabryczny (481)</item>
+        <item>Traugutta / Wasilkowska (484)</item>
+        <item>Traugutta / Wasilkowska (480)</item>
+        <item>Tryczówka Kościół (989)</item>
+        <item>Tryczówka Kościół (434)</item>
+        <item>Tuwima (123)</item>
+        <item>Tysiąclecia / Grodzieńska (501)</item>
+        <item>Tysiąclecia / Nadleśnictwo (506)</item>
+        <item>Tysiąclecia / Nadleśnictwo (503)</item>
+        <item>Tysiąclecia / Pl. Sopoćki (502)</item>
+        <item>Tysiąclecia / Stacja Paliw I (497)</item>
+        <item>Tysiąclecia / Stacja Paliw II (500)</item>
+        <item>Tysiąclecia / Stacja Paliw II (499)</item>
+        <item>Tysiąclecia / Zajazd (504)</item>
+        <item>Tysiąclecia / Zajazd (505)</item>
+        <item>Ubocze (347)</item>
+        <item>Uniwersytet Medyczny (236)</item>
+        <item>Uniwersytet Muzyczny (149)</item>
+        <item>Upalna (341)</item>
+        <item>Urząd Marszałkowski (516)</item>
+        <item>Urząd Wojewódzki (245)</item>
+        <item>Warszawska / Bank (511)</item>
+        <item>Warszawska / Piastowska (513)</item>
+        <item>Warszawska / Piastowska (514)</item>
+        <item>Warszawska / Uniwersytet (515)</item>
+        <item>Warzywna (197)</item>
+        <item>Wasilkowska / Andersa (524)</item>
+        <item>Wasilkowska / Błękitna (523)</item>
+        <item>Wasilkowska / Traugutta (521)</item>
+        <item>Wasilków (778)</item>
+        <item>Wasilków / Cisowa (510)</item>
+        <item>Wasilków / Dolina Cisów (647)</item>
+        <item>Wasilków / Jurowiecka (299)</item>
+        <item>Wasilków / Kościelna (776)</item>
+        <item>Wasilków / Ogródki Działkowe (577)</item>
+        <item>Wasilków / Ogródki Działkowe (566)</item>
+        <item>Wasilków / Osiedle (775)</item>
+        <item>Wasilków / Plaża (773)</item>
+        <item>Wasilków / Polna (771)</item>
+        <item>Wasilków / Polna (777)</item>
+        <item>Wasilków / Stacja Pomp (774)</item>
+        <item>Wasilków PKS (772)</item>
+        <item>Waszyngtona / DSK (213)</item>
+        <item>Waszyngtona / Szpital Uniwersytecki (212)</item>
+        <item>Waszyngtona / Wesoła (250)</item>
+        <item>Watykańska (235)</item>
+        <item>Węgierska (230)</item>
+        <item>Węgierska (227)</item>
+        <item>Wiadukt (154)</item>
+        <item>Wiadukt / Kościół (153)</item>
+        <item>Wiadukt / PKP Stadion (146)</item>
+        <item>Wiadukt / Politechnika (744)</item>
+        <item>Wiejska / Kopernika (526)</item>
+        <item>Wiejska / Kręta (531)</item>
+        <item>Wiejska / Politechnika (529)</item>
+        <item>Wiejska / Uniwersytet (528)</item>
+        <item>Wiejska / Zachodnia (527)</item>
+        <item>Wiejska/Pogodna (535)</item>
+        <item>Wiejska/Pogodna (525)</item>
+        <item>Wierzbowa / Antoniukowska (536)</item>
+        <item>Wierzbowa / PZMOT (537)</item>
+        <item>Wierzbowa / Rondo Reagana (258)</item>
+        <item>Wierzbowa / Technikum Mech. (538)</item>
+        <item>Wiewiórcza / Liceum (543)</item>
+        <item>Wiewiórcza / Szpacza (560)</item>
+        <item>Wiewiórcza / Szpacza (559)</item>
+        <item>Wiosenna (800)</item>
+        <item>Wiosenna / 11 Listopada (494)</item>
+        <item>Wiślana (263)</item>
+        <item>Wiślana (262)</item>
+        <item>Witosa / Os. Słoneczny Stok (547)</item>
+        <item>Witosa / Pawilon (546)</item>
+        <item>Witosa / Przychodnia (551)</item>
+        <item>Witosa / Skrajna (550)</item>
+        <item>Włościańska / Boisko (105)</item>
+        <item>Włościańska / Brzostowskiego (552)</item>
+        <item>Włościańska / Pieczurki (553)</item>
+        <item>Włościańska / Sklep (109)</item>
+        <item>Włościańska / Ściegiennego (106)</item>
+        <item>Wojszki (746)</item>
+        <item>Wojszki 10 (667)</item>
+        <item>Wojszki Wieś (209)</item>
+        <item>WORD (544)</item>
+        <item>Woroszyły 1 (953)</item>
+        <item>Woroszyły 2 (954)</item>
+        <item>Wólka (839)</item>
+        <item>Wólka (836)</item>
+        <item>Wólka Poduchowna (952)</item>
+        <item>Wólka Przedmieście (951)</item>
+        <item>Wrocławska/Miodowa (562)</item>
+        <item>Wrocławska/Rybnika (561)</item>
+        <item>Wrocławska/Storczykowa (563)</item>
+        <item>Wrocławska/Zielonogórska (564)</item>
+        <item>Wysockiego (567)</item>
+        <item>Wysockiego / Cm. Miejski (573)</item>
+        <item>Wysockiego / Cm. Miejski (570)</item>
+        <item>Wysockiego / Krzywoustego (578)</item>
+        <item>Wysockiego / Krzywoustego (565)</item>
+        <item>Wysockiego / Outlet (569)</item>
+        <item>Wysockiego / Outlet (574)</item>
+        <item>Wysockiego / Pietrasze (571)</item>
+        <item>Wysockiego / Raginisa (522)</item>
+        <item>Wysockiego / Silikaty (568)</item>
+        <item>Wysockiego / Silikaty (575)</item>
+        <item>Wysockiego / Zgoda (572)</item>
+        <item>Wysockiego/Pętla (576)</item>
+        <item>Wyszyńskiego (508)</item>
+        <item>Wyszyńskiego / Bema (519)</item>
+        <item>Wyszyńskiego / Kaczorowskiego (518)</item>
+        <item>Wyszyńskiego / Młynowa (517)</item>
+        <item>Wyszyńskiego / Sosnowskiego (509)</item>
+        <item>Wyszyńskiego / Stołeczna (520)</item>
+        <item>Zabłudowska / Kol.Dojlidy (615)</item>
+        <item>Zabłudowska / Masztowa (619)</item>
+        <item>Zabłudowska / Ordynacka (621)</item>
+        <item>Zabłudowska / Stoczni Gdańskiej (618)</item>
+        <item>Zabłudowska / Stoczni Gdańskiej (622)</item>
+        <item>Zabłudowska / Zagórki (627)</item>
+        <item>Zabłudowska / Zalesie (614)</item>
+        <item>Zabłudowska/ Gminna (617)</item>
+        <item>Zacisze Dolistówki (198)</item>
+        <item>Zacisze Dolistówki (195)</item>
+        <item>Zagumienna (388)</item>
+        <item>Zajączki (991)</item>
+        <item>Zajączki Las (990)</item>
+        <item>Zakład Poprawczy (199)</item>
+        <item>Zakłady Graficzne (496)</item>
+        <item>Zamoyskiego (656)</item>
+        <item>Zamoyskiego (655)</item>
+        <item>Zaścianki (031)</item>
+        <item>Zaścianki (029)</item>
+        <item>Zaścianki / Afrykańska (715)</item>
+        <item>Zaścianki / Cerkiew (711)</item>
+        <item>Zaścianki / Cerkiew (716)</item>
+        <item>Zaścianki / Stacja Paliw (717)</item>
+        <item>Zaścianki / Stacja Paliw (713)</item>
+        <item>Zaścianki / Usługowa (712)</item>
+        <item>Zawady (649)</item>
+        <item>Zawady (648)</item>
+        <item>Zawady / Pętla (651)</item>
+        <item>Zawady / Pętla (650)</item>
+        <item>Zawady / Św. Krzysztofa (961)</item>
+        <item>Zielone Wzgórza (583)</item>
+        <item>Zielone Wzgórza (584)</item>
+        <item>Zielonogórska / Bank (581)</item>
+        <item>Złotniki (988)</item>
+        <item>Złotniki (435)</item>
+        <item>Złotniki / Kolonia (353)</item>
+        <item>Złotniki / Kolonia (477)</item>
+        <item>Zwierzyniecka / 11 Listopada (674)</item>
+        <item>Zwierzyniecka / Cm.Wojskowy (670)</item>
+        <item>Zwierzyniecka / Kaczorowskiego (587)</item>
+        <item>Zwierzyniecka / Świerkowa (589)</item>
+        <item>Zwierzyniecka / Wesoła (586)</item>
+        <item>Zwierzyniecka / Wiejska (590)</item>
+        <item>Zwycięstwa / Hetmańska (594)</item>
+        <item>Zwycięstwa / Prowiantowa (597)</item>
+        <item>Zwycięstwa / WSE (595)</item>
+        <item>Żeromskiego / Pułaskiego (607)</item>
+        <item>Żeromskiego / Transportowa (325)</item>
+        <item>Żurawia / Borsucza (156)</item>
+        <item>Żyzna (683)</item>
+    </string-array>
+
+
+    <string-array name="line_array">
+        <item></item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>100</item>
+        <item>101</item>
+        <item>102</item>
+        <item>103</item>
+        <item>104</item>
+        <item>105</item>
+        <item>106</item>
+        <item>107</item>
+        <item>108</item>
+        <item>110</item>
+        <item>113</item>
+        <item>120</item>
+        <item>200</item>
+        <item>201</item>
+        <item>202</item>
+        <item>C1</item>
+        <item>N1</item>
+        <item>N2</item>
+        <item>N3</item>
+        <item>N4</item>
+        <item>N5</item>
+        <item>N6</item>
+
+
+</string-array>
+
+</resources>

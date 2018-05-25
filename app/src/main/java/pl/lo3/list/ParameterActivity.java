@@ -1,6 +1,5 @@
 package pl.lo3.list;
 
-import android.app.Activity;
 import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
@@ -10,7 +9,6 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.TimePicker;
 import android.widget.Toast;
@@ -26,13 +24,6 @@ import pl.lo3.list.databinding.ActivityParameterBinding;
 
 public class ParameterActivity extends AppCompatActivity {
 
-//    private Toolbar toolbar;
-//    private EditText inputLand, inputCity, inputFrom, inputDown;
-//    private TextInputLayout inputLayoutLand, inputLayoutCity;
-//    private Button btnSave;
-//    private Spinner inputStop, inputLine;
-//    private int CalendarHour, CalendarMinute;
-
     ActivityParameterBinding binding;
     ArrayAdapter<CharSequence> adapterStop;
     ArrayAdapter<CharSequence> adapterLine;
@@ -43,23 +34,15 @@ public class ParameterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_parameter);
          binding= DataBindingUtil.setContentView(this, R.layout.activity_parameter);
 
-        //toolbar = (Toolbar) findViewById(R.id.toolbar);
+
         setSupportActionBar(binding.toolbar);
 
-//        inputLayoutLand = (TextInputLayout) findViewById(R.id.input_layout_land);
-//        inputLayoutCity = (TextInputLayout) findViewById(R.id.input_layout_city);
-//        inputLand = (EditText) findViewById(R.id.input_land);
-//        inputCity = (EditText) findViewById(R.id.input_city);
-//        inputStop = (Spinner) findViewById(R.id.input_stop);
-//        inputLine = (Spinner) findViewById(R.id.input_line);
-//        inputFrom =(EditText) findViewById(R.id.input_from);
-//        inputDown =(EditText) findViewById(R.id.input_down);
 
         //TODO zasilenie z zasobu (bazy, pliku) listy przystanków do przemyslenia ułatwienie wyszukania z długiej listy
         // Create an ArrayAdapter using the string array and a default spinner layout
         adapterStop = ArrayAdapter.createFromResource(this,
                 R.array.stop_array, android.R.layout.simple_spinner_dropdown_item);
-        // Apply the adapter to the spinner
+//        // Apply the adapter to the spinner
         binding.inputStop.setAdapter(adapterStop);
 
         //TODO zasilenie z zasobu (bazy, pliku) listy linii do przemyslenia ułatwienie wyszukania z długiej listy
@@ -69,13 +52,11 @@ public class ParameterActivity extends AppCompatActivity {
         // Apply the adapter to the spinner
         binding.inputLine.setAdapter(adapterLine);
 
-        // ustawienie domyslne na inną wartość inputStop.setSelection(2);
 
         Calendar calendar = Calendar.getInstance();
         if(getIntent().getStringExtra("land") != null)
         {
             // pobranie parametru
-
             String compareValue;
             binding.inputId.setText(getIntent().getStringExtra("id"));
             binding.inputLand.setText(getIntent().getStringExtra("land"));
@@ -83,7 +64,9 @@ public class ParameterActivity extends AppCompatActivity {
 
             compareValue = getIntent().getStringExtra("stop");
                         if (compareValue != null) {
-                            binding.inputStop.setSelection(adapterStop.getPosition(compareValue));
+                            // TODO set SerachableSpiner from compareValue
+                            binding.inputStop.set_strHintText(compareValue);
+                       //    binding.inputStop.setSelection(adapterStop.getPosition(compareValue));
                         }
             compareValue = getIntent().getStringExtra("line");
             if (compareValue != null) {
@@ -103,8 +86,6 @@ public class ParameterActivity extends AppCompatActivity {
             binding.inputDown.setText(String.format("%02d:%02d:00",  calendar.get(Calendar.HOUR_OF_DAY), calendar.get(Calendar.MINUTE)));
         }
 
-        //binding.btnSave = (Button) findViewById(R.id.btn_save);
-
         binding.inputLand.addTextChangedListener(new MyTextWatcher(binding.inputLand));
         binding.inputCity.addTextChangedListener(new MyTextWatcher(binding.inputCity));
 
@@ -112,8 +93,6 @@ public class ParameterActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent returnIntent = new Intent();
-                setResult(Activity.RESULT_CANCELED, returnIntent);
-
                 if (submitForm())
                 {
                     State tmpD = new State();
@@ -121,7 +100,7 @@ public class ParameterActivity extends AppCompatActivity {
                     tmpD.setCity(binding.inputCity.getText().toString().trim());
                     tmpD.setLand(binding.inputLand.getText().toString().trim());
                     tmpD.setStopNumberAndName(binding.inputStop.getSelectedItem().toString().trim());
-                    tmpD.setLineNumberAndDirection(binding.inputLine.getSelectedItem().toString().trim());
+                    tmpD.setLineNumber(Integer.valueOf(binding.inputLine.getSelectedItem().toString().trim()));
 
                     SimpleDateFormat sdf = new SimpleDateFormat("hh:mm:ss");
                     Date tmpTime = null;
@@ -150,9 +129,6 @@ public class ParameterActivity extends AppCompatActivity {
                     tmpD.setId(tmpId);
                     Paper.book().write(String.valueOf(tmpId), tmpD);
                     Toast.makeText(getApplicationContext(), R.string.Conform, Toast.LENGTH_SHORT).show();
-
-//                    returnIntent.putExtra("result",1);
-//                    setResult(Activity.RESULT_OK,returnIntent);
                     finish();
 
                 }
@@ -163,7 +139,6 @@ public class ParameterActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 Calendar calendar = Calendar.getInstance();
-                //TODO set time from file binding.inputFrom.getText()
                 int CalendarHour = calendar.get(Calendar.HOUR_OF_DAY);
                 int CalendarMinute = calendar.get(Calendar.MINUTE);
 
@@ -188,7 +163,6 @@ public class ParameterActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 Calendar calendar = Calendar.getInstance();
-                //TODO set time from file binding.inputDown.getText()
                 int CalendarHour = calendar.get(Calendar.HOUR_OF_DAY);
                 int CalendarMinute = calendar.get(Calendar.MINUTE);
 
@@ -207,32 +181,7 @@ public class ParameterActivity extends AppCompatActivity {
             }
         });
 
-        binding.inputStop.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener()
-        {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
-            {
-                String selectedClass = parent.getItemAtPosition(position).toString();
-                if (selectedClass.length()>0) {
-                switch (selectedClass.substring(0, 3)) {
-                    case "250":
-                        //TODO obsługa
 
-                        break;
-                    case "260":
-                        //TODO obsługa
-
-                        break;
-                }
-            }
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent)
-            {
-                // can leave this empty
-            }
-        });
     }
 
     /**
@@ -257,7 +206,6 @@ public class ParameterActivity extends AppCompatActivity {
     }
 
     private boolean validateLine() {
-        //binding.inputStop.setSelection(adapterStop.getPosition(compareValue));
         if (binding.inputLine.getSelectedItem().toString().trim().isEmpty()) {
             binding.inputLayoutLine.setError(getString(R.string.err_msg_line));
             requestFocus(binding.inputLine);
@@ -269,6 +217,12 @@ public class ParameterActivity extends AppCompatActivity {
     }
 
     private boolean validateStop() {
+        if (binding.inputStop.getSelectedItem() == null){
+            binding.inputLayoutStop.setError(getString(R.string.err_msg_stop));
+            requestFocus(binding.inputStop);
+            return false;
+        }
+
         if (binding.inputStop.getSelectedItem().toString().trim().isEmpty()) {
             binding.inputLayoutStop.setError(getString(R.string.err_msg_stop));
             requestFocus(binding.inputStop);

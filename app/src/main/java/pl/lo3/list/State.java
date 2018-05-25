@@ -66,9 +66,12 @@ public class State {
 		this.stopNumber = stopNumber;
 	}
 	public void setStopNumberAndName(String stopNaN) {
-		String[] RowData = stopNaN.split("-");
-		this.stopNumber = Integer.parseInt(RowData[0].trim());
-		this.stopName=RowData[1];
+		//from this format
+		// 11 Listopada / Park (218)
+		String[] RowData = stopNaN.split("\\(");
+		String tmpStopName=RowData[1].trim();
+		this.stopNumber = Integer.parseInt(tmpStopName.substring(0,tmpStopName.length()-1));
+		this.stopName=RowData[0];
 	}
 	public String getLand() {
 		return land;

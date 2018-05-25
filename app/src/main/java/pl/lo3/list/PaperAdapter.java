@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Filterable;
 import android.widget.TextView;
 
 import java.util.List;
@@ -18,7 +19,7 @@ import io.paperdb.Paper;
  * 
  * ArrayAdapter - a type of Adapter that works a lot like ArrayList.
  */
-public class PaperAdapter extends ArrayAdapter<State> {
+public class PaperAdapter extends ArrayAdapter<State> implements Filterable {
 	Context ctx;
 
 	//We must accept the textViewResourceId parameter, but it will be unused
@@ -31,7 +32,7 @@ public class PaperAdapter extends ArrayAdapter<State> {
 		
 		//Load the data.
 		loadArrayFromPaper();
-//        this.setNotifyOnChange(true);
+
 	}
 	
 	
@@ -43,12 +44,6 @@ public class PaperAdapter extends ArrayAdapter<State> {
 	 * (non-Javadoc)
 	 * @see android.widget.ArrayAdapter#getView(int, android.view.View, android.view.ViewGroup)
 	 */
-//    @Override
-//    public void notifyDataSetChanged() {
-//        this.clear();
-//        loadArrayFromPaper();
-//        super.notifyDataSetChanged();
-//    }
 	@Override
 	public View getView(final int pos, View convertView, final ViewGroup parent){
 		/*
@@ -94,6 +89,7 @@ public class PaperAdapter extends ArrayAdapter<State> {
 		List<String> allKeys = Paper.book().getAllKeys();
 		State cur;
 
+
 		for (int i = 0; i <allKeys.size() ; i++) {
             //Create a State object for each Key.
             cur = Paper.book().read(String.valueOf(i+1));
@@ -105,15 +101,6 @@ public class PaperAdapter extends ArrayAdapter<State> {
     public void reloadArrayFromPaper(){
         this.clear();
         loadArrayFromPaper();
-
-    }
-
-    private void reloadFromPaper(Integer KeyToReload){
-
-            State cur = new State();
-            cur = Paper.book().read(String.valueOf(KeyToReload));
-            //Add the State object to the ArrayList (in this case we are the ArrayList).
-            this.insert(cur,KeyToReload-1);
 
     }
 

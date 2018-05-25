@@ -98,10 +98,8 @@ public class CSVAdapter extends ArrayAdapter<State>{
 				
 				//Split to separate the name from the capital
 				String[] RowData = line.split(",");
-				//TODO dodac inne zmianienne
 				//Create a State object for this row's data.
 				State cur = new State();
-
 				cur.setId(Long.parseLong(RowData[0].trim()));
 				cur.setLand(RowData[1]);
 				cur.setCity(RowData[2]);

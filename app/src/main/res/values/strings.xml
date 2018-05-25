@@ -23,22 +23,24 @@
     <string name="hint_down">Do</string>
     <string name="default_land">Polska</string>
     <string name="default_city">Białystok</string>
+    <string name="hint_search_stop">Wprowadź nazwę przystanku</string>
+    <string name="hint_search_line">Wprowadź linię</string>
 
 
-    <string-array name="stop_array">
-        <item></item>
-        <item>250-Białowny</item>
-        <item>260-Lipowa</item>
-        <item>270-Piłsudzkiego</item>
-        <item>280-Pogodna</item>
-    </string-array>
+    <!--  <string-array name="stop_array">
+          <item></item>
+          <item>250-Białowny</item>
+          <item>260-Lipowa</item>
+          <item>270-Piłsudzkiego</item>
+          <item>280-Pogodna</item>
+      </string-array>
 
 
-    <string-array name="line_array">
-        <item></item>
-        <item>2-Kierunek A</item>
-        <item>8-Kierunek B</item>
-        <item>11-Kierunek C</item>
-        <item>12-Kierunek D</item>
-    </string-array>
+      <string-array name="line_array">
+          <item></item>
+          <item>2-Kierunek A</item>
+          <item>8-Kierunek B</item>
+          <item>11-Kierunek C</item>
+          <item>12-Kierunek D</item>
+      </string-array>-->
 </resources>
