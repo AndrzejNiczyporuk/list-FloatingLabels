@@ -46,8 +46,6 @@ public class SearchableSpinner extends Spinner implements View.OnTouchListener,
         _arrayAdapter = ArrayAdapter.createFromResource(_context,
                 R.array.stop_array, android.R.layout.simple_list_item_1);
         setAdapter(_arrayAdapter);
-        //TODO setSelection make error ArrayOutOfIndex
-        //      setSelection(_arrayAdapter.getPosition(_strHintText));
     }
 
     public SearchableSpinner(Context context) {
