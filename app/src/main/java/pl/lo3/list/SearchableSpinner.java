@@ -31,21 +31,24 @@ public class SearchableSpinner extends Spinner implements View.OnTouchListener,
     private boolean _isDirty;
     private ArrayAdapter _arrayAdapter;
 
+
+
+    private String _strHintText;
+    private boolean _isFromInit;
+
+
     public String get_strHintText() {
         return _strHintText;
     }
 
     public void set_strHintText(String _strHintText) {
         this._strHintText = _strHintText;
-        ArrayAdapter arrayAdapter = ArrayAdapter.createFromResource(_context,
+        _arrayAdapter = ArrayAdapter.createFromResource(_context,
                 R.array.stop_array, android.R.layout.simple_list_item_1);
-        setAdapter(arrayAdapter);
+        setAdapter(_arrayAdapter);
         //TODO setSelection make error ArrayOutOfIndex
-  //      setSelection(_arrayAdapter.getPosition(_strHintText));
-     }
-
-    private String _strHintText;
-    private boolean _isFromInit;
+        //      setSelection(_arrayAdapter.getPosition(_strHintText));
+    }
 
     public SearchableSpinner(Context context) {
         super(context);
@@ -83,10 +86,10 @@ public class SearchableSpinner extends Spinner implements View.OnTouchListener,
 
         _arrayAdapter = (ArrayAdapter) getAdapter();
         if (!TextUtils.isEmpty(_strHintText)) {
-            ArrayAdapter arrayAdapter = new ArrayAdapter(_context, android.R.layout
+            _arrayAdapter = new ArrayAdapter(_context, android.R.layout
                     .simple_list_item_1, new String[]{_strHintText});
             _isFromInit = true;
-            setAdapter(arrayAdapter);
+            setAdapter(_arrayAdapter);
         }
     }
 
